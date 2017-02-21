@@ -1,0 +1,65 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Ricard Marxer
+email: email@ricardmarxer.com
+description: > # this means to ignore newlines until "baseurl:"
+  Research page of Ricard Marxer.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: ricardmp
+github_username:  rikrd
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM # Enable GitHub Flavored Markdown (fenced code blocks)
+  hard_wrap: false
+highlighter: rouge
+theme: minima
+gems:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
+scholar:
+  style: apa
+  locale: en
+  bibliography_template: bibliography
+
+  sort_by: year,month
+  order: descending
+  group_by: type
+  type_names:
+    patent: Patents
+    thesis: Thesis
+    techreport: Other
+
+  type_order:
+    - article
+    - incollection
+    - patent
+    - inproceedings
+    - thesis
+
+  source: ./_bibliography
+  bibliography: pubs.bib
+
+  details_dir:    bibliography
+  details_layout: bibtex.html
+  details_link:   Details
+
+  query: "!@proceedings"
