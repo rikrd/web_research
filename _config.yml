@@ -36,6 +36,7 @@ exclude:
   - Gemfile.lock
 
 scholar:
+  #  style: ieee
   style: apa
   locale: en
   bibliography_template: bibliography
