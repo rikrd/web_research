@@ -1,6 +1,17 @@
 ---
-# You don't need to edit this file, it's empty on purpose.
-# Edit theme's home layout instead if you wanna make some changes
-# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-layout: home
+layout: page
 ---
+
+I'm currently a Research Associate at the [Speech and Hearing Research Group (SpandH)](http://spandh.dcs.shef.ac.uk/) in the Department of Computer Science, [University of Sheffield](http://spandh.dcs.shef.ac.uk/).
+
+My research interests:
+ - Inverse problem modelling
+ - Source spearation
+ - Low-latency processing
+ - Music and audio analysis/synthesis
+ - Speech technologies
+ - Speech perception
+ - Vocal interactivity
+ - Incremental unsupervised learning
+
+

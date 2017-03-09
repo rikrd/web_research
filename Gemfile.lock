@@ -15,7 +15,7 @@ GEM
       namae (~> 0.7)
     csl-styles (1.0.1.7)
       csl (~> 1.0)
-    ffi (1.9.17)
+    ffi (1.9.18)
     forwardable-extended (2.6.0)
     jekyll (3.4.0)
       addressable (~> 2.4)
@@ -72,7 +72,7 @@ DEPENDENCIES
   tzinfo-data
 
 RUBY VERSION
-   ruby 2.4.0p0
+   ruby 2.0.0p648
 
 BUNDLED WITH
    1.14.4
