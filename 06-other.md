@@ -4,12 +4,10 @@ title: Other
 permalink: /other/
 ---
 
-## Art
-
 ### Caligraft
-  Caligraft is a generative art work which consists of a series of interactive pieces exploring the limits of representation in typographies and texts.
+   [<img style="max-width: 200px; float: right; margin: 1em; overflow: auto;" src="{{ site.baseurl }}/assets/caligraft.jpg">](http://www.caligraft.com)
 
- - [Caligraft](http://www.caligraft.com) - online - 2006
+  [Caligraft](http://www.caligraft.com) (2006) is a generative art work which consists of a series of interactive pieces exploring the limits of representation in typographies and texts.
 
   This project has been featured and presented at:
    - [OFFF'06](https://web.archive.org/web/20060907232958/http://www.offf.ws/bcn/html/programa.php?artista_id=375&lang=es)
@@ -20,23 +18,22 @@ permalink: /other/
 
 ### Mechanical attractors
 
-   <img style="max-width: 200px; float: right; margin: 1em; overflow: auto;" src="{{ site.baseurl }}/assets/mechanical_attractors.png">
+   [<img style="max-width: 200px; float: right; margin: 1em; overflow: auto;" src="{{ site.baseurl }}/assets/mechanical_attractors.png">](http://www.ricardmarxer.com/mechanical_attractors)
 
-   Mechanical attractors is a collection of virtual artifacts involving simple physical interactions that are concrete, predictable and easy to understand for everyone. The output of the experiments consists simply in drawing the paths of some of the objects in the scene.
-
- - [Mechanical attractors](http://www.ricardmarxer.com/mechanical_attractors) - online - 2006
+   [Mechanical attractors](http://www.ricardmarxer.com/mechanical_attractors) (2010) is a collection of virtual artifacts involving simple physical interactions that are concrete, predictable and easy to understand for everyone. The output of the experiments consists simply in drawing the paths of some of the objects in the scene.
 
 ### Other
  
-   <img style="max-width: 200px; margin: 1em; overflow: auto;" src="{{ site.baseurl }}/assets/written_images.png">
+   [<img style="max-width: 200px; float: right; margin: 1em; overflow: auto;" src="{{ site.baseurl }}/assets/written_images.png">](http://www.writtenimages.net/)
  
- - Artwork for [WrittenImages](http://www.writtenimages.net/)
-
-   <img style="max-width: 600px; margin: 1em; overflow: auto;" src="{{ site.baseurl }}/assets/vimeo.png">
+ I was invited to contribute artwork for the generative book [WrittenImages](http://www.writtenimages.net/). For each print of the book all the processes submitted by the artists are exectued realising unique results for each book.
  
- - Small test [Earth](https://vimeo.com/10779097)
+ 
+  [Earth](https://vimeo.com/10779097), [Apple](https://vimeo.com/10782743) and [Moon](https://vimeo.com/10782479) are three small toy examples of using the library Fisica. These are 2D physics simulations ran twice, given the deterministic nature of them they will result in the same movements, collisions and resting positions of the bodies involved.
 
-## Talks, Interviews & Features
+   [<img style="max-width: 600px; margin: 1em; overflow: auto;" src="{{ site.baseurl }}/assets/vimeo.png">](https://vimeo.com/10779097)
+
+## Talks, interviews & features
 
  - [Mosaic UOC interview](http://mosaic.uoc.edu/2014/05/27/entrevista-a-ricard-marxer) - online magazine - 2014
  - [Codificando mundos – Taller de comportamientos físicos en la programación creativa](http://zzzinc.net/2012/taller-fisica/) - workshop about Fisica - 2012
