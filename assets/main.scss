@@ -5,8 +5,8 @@
 
 // Our variables
 $base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$base-font-size:   14px;
-$base-font-weight: 400;
+$base-font-size:   15px;
+$base-font-weight: 300;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
@@ -43,7 +43,10 @@ $on-laptop:        800px;
 }
 
 .site-header {
-  background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+  //background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+  background: #2BC0E4; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #2BC0E4 , #EAECC6); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #2BC0E4 , #EAECC6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .wrapper img {
