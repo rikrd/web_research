@@ -35,11 +35,19 @@ permalink: /other/
 
 ## Talks, interviews & features
 
- - [Mosaic UOC interview](http://mosaic.uoc.edu/2014/05/27/entrevista-a-ricard-marxer) - online magazine - 2014
- - [Codificando mundos – Taller de comportamientos físicos en la programación creativa](http://zzzinc.net/2012/taller-fisica/) - workshop about Fisica - 2012
- - [La Malla Tendencies](http://lamalla.minisites.xtvl.tv/programes/fitxa/nouscreadors/21489?page=2) - TV interview - 2012
- - [bcn216 + Cristian Vogel, Ricard Marxer & Oscar Sol: Japó](https://press.sonar.es/en/artistes/bcn216-cristian-vogel-ricard-marxer-oscar-sol-japo_231.html) - visuals for Sonar 2010 inagural concert, Barcelona - 2010
- - [Visualizar'07: Advanced Project Development and Production Workshop](http://medialab-prado.es/article/visualizar_taller_avanzado_de_desarrollo_y_produccion_de_proyectos) - tutor for the Visualizar workshop at Medialab Prado, Madrid - 2007
- - [Computer and generative art](http://medialab-prado.es/article/computacion_y_arte_generativo) - talk at Medialab Prado, Madrid - 2006
- - [Programming Logic for artists](http://medialab-prado.es/article/logica_de_programacion_para_artistas__) - workshop at Medialab Prado, Madrid - 2006
- - [4th AVLAB meeting](http://medialab-prado.es/article/avlab_programa_161106) - meeting AudioVisual community at Medialab Prado, Madrid - 2006
+ - [Mosaic UOC interview](http://mosaic.uoc.edu/2014/05/27/entrevista-a-ricard-marxer) \\
+   online magazine - 2014
+ - [Codificando mundos – Taller de comportamientos físicos en la programación creativa](http://zzzinc.net/2012/taller-fisica/) \\
+  workshop about Fisica - 2012
+ - [La Malla Tendencies](http://lamalla.minisites.xtvl.tv/programes/fitxa/nouscreadors/21489?page=2) \\
+  TV interview - 2012
+ - [bcn216 + Cristian Vogel, Ricard Marxer & Oscar Sol: Japó](https://press.sonar.es/en/artistes/bcn216-cristian-vogel-ricard-marxer-oscar-sol-japo_231.html) \\
+  visuals for Sonar 2010 inagural concert, Barcelona - 2010
+ - [Visualizar'07: Advanced Project Development and Production Workshop](http://medialab-prado.es/article/visualizar_taller_avanzado_de_desarrollo_y_produccion_de_proyectos) \\
+  tutor for the Visualizar workshop at Medialab Prado, Madrid - 2007
+ - [Computer and generative art](http://medialab-prado.es/article/computacion_y_arte_generativo) \\
+  talk at Medialab Prado, Madrid - 2006
+ - [Programming Logic for artists](http://medialab-prado.es/article/logica_de_programacion_para_artistas__) \\
+  workshop at Medialab Prado, Madrid - 2006
+ - [4th AVLAB meeting](http://medialab-prado.es/article/avlab_programa_161106) \\
+  meeting AudioVisual community at Medialab Prado, Madrid - 2006

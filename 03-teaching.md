@@ -13,8 +13,8 @@ permalink: /teaching/
   - Universitat Pompeu Fabra
  
 ### Generative Visual Design lectures 
-  - Universitat Pompeu Fabra
   - Master in Digital Arts
+  - Universitat Pompeu Fabra
  
 ### Processing lectures 
   - Interaction Design Postgraduate Course 
