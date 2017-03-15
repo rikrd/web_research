@@ -22,7 +22,7 @@ permalink: /other/
 
    [Mechanical attractors](http://www.ricardmarxer.com/mechanical_attractors) (2010) is a collection of virtual artifacts involving simple physical interactions that are concrete, predictable and easy to understand for everyone. The output of the experiments consists simply in drawing the paths of some of the objects in the scene.
 
-### Other
+### Other projects and collaborations
  
    [<img style="max-width: 200px; float: right; margin: 1em; overflow: auto;" src="{{ site.baseurl }}/assets/written_images.png">](http://www.writtenimages.net/)
  
@@ -32,7 +32,12 @@ permalink: /other/
   [Earth](https://vimeo.com/10779097), [Apple](https://vimeo.com/10782743) and [Moon](https://vimeo.com/10782479) are three small toy examples of using the library Fisica. These are 2D physics simulations ran twice, given the deterministic nature of them they will result in the same movements, collisions and resting positions of the bodies involved.
 
    [<img style="max-width: 600px; margin: 1em; overflow: auto;" src="{{ site.baseurl }}/assets/vimeo.png">](https://vimeo.com/10779097)
-
+   
+   [<img style="max-width: 200px; float: right; margin: 1em; overflow: auto;" src="{{ site.baseurl }}/assets/cascadeonwheels.jpg">](http://www.trsp.net/cow/)
+ 
+   Collaborated on [Cascade on Wheels](http://www.trsp.net/cow/), a traffic visualization project by [Steph Thirion](http://www.trsp.net/).
+   
+   
 ## Talks, interviews & features
 
  - [Mosaic UOC interview](http://mosaic.uoc.edu/2014/05/27/entrevista-a-ricard-marxer) \\

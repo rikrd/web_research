@@ -27,8 +27,7 @@ The corpus has been distilled from over 300,000 listener responses and includes 
 
 Almost all animals exploit vocal signals for a range of ecologically-motivated purposes: from detecting predators/prey and marking territory, to expressing emotions, establishing social relations and sharing information.  Whether it is a bird raising an alarm, a whale calling to potential partners, a dog responding to human commands, a parent reading a story with a child, or a businessperson accessing stock prices using Siri on an iPhone, vocalisation provides a valuable communications channel through which behaviour may be coordinated and controlled, and information may be distributed and acquired.  Indeed, the ubiquity of vocal interaction has led to research across an extremely diverse array of fields, from assessing animal welfare, to understanding the precursors of human language, to developing voice-based human-machine interaction.
 
-[VIHAR](http://www.vihar.org) is an community dedicated to the interdisciplinary study of vocal interactivity in-and-between humans, animal and robots. We have organised a [Dagstuhl seminar](http://www.dagstuhl.de/16442) in 2016 and are in the process or organising the [1st VIHAR Workshop](http://vihar2017.vihar.org) as a satellite event to INTERSPEECH 2017.
-
+[VIHAR](http://www.vihar.org) is an community dedicated to the interdisciplinary study of vocal interactivity in-and-between humans, animal and robots. We have organised a [Dagstuhl seminar](http://www.dagstuhl.de/16442) in 2016 and are in the process or organising the [1st VIHAR Workshop](http://vihar-2017.vihar.org) as a satellite event to INTERSPEECH 2017.
 
 ### Audio source separation
    <img style="max-width: 200px; float: right; margin: 1em; overflow: auto;" src="{{ site.baseurl }}/assets/source_separation.png">
@@ -56,4 +55,4 @@ Guided by the idea that musical human-computer interaction may become more effec
  - Co-organiser of the [CHiME3](http://spandh.dcs.shef.ac.uk/chime_challenge/chime2015/) & [CHiME4](http://spandh.dcs.shef.ac.uk/chime_challenge/) challenges
  - Co-organiser of the [CHiME 2016 workshop](http://spandh.dcs.shef.ac.uk/chime_workshop/)
  - Coordinator of the [VIHAR Dagstuhl seminar 2016](http://www.dagstuhl.de/16442)
- - Co-organiser of the [VIHAR 2017 workshop](http://vihar207.vihar.org)
+ - Co-organiser of the [VIHAR 2017 workshop](http://vihar-2017.vihar.org)

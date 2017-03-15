@@ -17,7 +17,7 @@ title: Ricard Marxer
 email: email@ricardmarxer.com
 description: > # this means to ignore newlines until "baseurl:"
   Research page of Ricard Marxer.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/research" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: ricardmp
 github_username:  rikrd

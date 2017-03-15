@@ -5,6 +5,7 @@ permalink: /software/
 ---
 
 ### Loudia
+[<img style="max-width: 200px; float: right; margin: 1em; overflow: auto;" src="{{ site.baseurl }}/assets/loudia.png">](http://www.ricardmarxer.com/loudia)
 
 Loudia is a Free Software audio processing library written in C++. It implements a variety of common processing blocks such as Windowing, FFT/IFFT, FIR/IIR Filters, onset detectors, pitch estimation, MFCC, LPC, NMF.
 
