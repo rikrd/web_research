@@ -1,0 +1,1129 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Codificando mundos</title>
+    <meta charset='utf-8'>
+    <link href='http://fonts.googleapis.com/css?family=Average+Sans' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Anaheim' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="http://use.typekit.net/mbp4btr.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <script src='slides.js'></script>
+  </head>
+
+  <body style='display: none'>
+
+    <section class='slides layout-widescreen'>
+      
+      <article>
+        <h1>Codificando mundos</h1>
+        <h3>Taller de comportamientos físicos en la programación creativa<br/>Barcelona, Noviembre 23-24, 2012</h3>
+          
+        
+          <div class="presenter">
+            <p>
+                <a href="http://www.ricardmarxer.com/">Ricard Marxer</a>
+            </p>
+            <p>
+                <a href="http://zzzinc.net/en" title="ZZZINC"><img src="img/zzzinc-logo.gif" width="227" height="110" alt="ZZZINC logo"></a>
+            </p>
+            <p>
+                <em><small>(Press space or enter to navigate to the next slide, left arrow to go backwards.)</small></em>
+            </p>
+          </div>
+      </article>
+      
+  
+  
+      <article>
+      
+        <h2>Introducción</h2>
+      
+      </article>
+  
+  
+  
+      <article>
+      
+        <h3>Librerías fisicas para Processing</h3>
+        
+  
+        <p>
+            <b><a href="http://murderandcreate.com/physics/">Traer Physics</a></b>: simulador de física de partículas<br><br>
+        </p>
+        
+        <p>
+            <b><a href="http://toxiclibs.org/">toxiclibs</a></b>: el módulo vertletphysics es un simulador físico sencillo para 3D<br><br>
+        </p>
+        
+        <p>
+            <b><a href="http://pphys2d.jmcouillard.com/">PPhys2D</a></b>: adaptación de Phys2D (alternativa de JBox2D)<br><br>
+        </p>
+
+        <p>
+            <b><a href="http://github.com/shiffman/PBox2D">PBox2D</a></b>: conjunto de funciones de ayuda para JBox2D<br><br>
+        </p>
+
+        <br><br>
+        
+        <p>
+            <b><a href="http://ricardmarxer.com/fisica/">Fisica</a></b>: capa orientada objetos sobre JBox2D<br><br>
+        </p>
+
+      
+      </article>
+  
+  
+  
+      <article>
+      
+        <h3>Motivación</h3>
+        
+            <br>
+  
+            <p>
+                Facilitar la creación de simulaciones físicas 2D en Processing
+            </p>
+            
+
+            <ul>
+            
+                <li>Orientación objetos</li>
+
+                <li>Valores por defecto</li>
+
+                <li>Implementar casos de uso más comunes</li>
+
+                <li>Gestión de estilos como Processing</li>
+            
+                <li>Gestión de eventos como Processing</li>
+            
+            </ul>
+
+  
+            <br>
+  
+            <p>
+                Permitir el uso más avanzado de <b>JBox2D</b>
+            </p>
+            
+
+            <ul>
+            
+                <li>Acceso a los objetos subyacentes</li>
+                        
+            </ul>
+      
+      </article>
+  
+  
+  
+      <article>
+      
+        <h2>QuickStart</h2>
+      
+      </article>
+  
+  
+  
+      <article>
+      
+        <h3>Inicialización</h3>
+        
+            <ul>
+            
+                <li>Importar la librería</li>
+                <li>Llamar a <b><a href="http://ricardmarxer.com/fisica/reference/fisica/Fisica.html#init(processing.core.PApplet)" target="_blank">Fisica.init()</a></b> en el setup() pasandole el sketch como argumento</li>
+                        
+            </ul>
+            
+            <br>
+            
+            <div class="code" contenteditable="true">
+            <pre>
+import fisica.*;
+
+void setup() {
+  size(400, 400);
+  
+  Fisica.init(this);
+}</pre>
+            </div>
+
+            
+            
+      
+      </article>
+  
+  
+  
+      <article>
+      
+        <h3>Creación del mundo</h3>
+        
+            <ul>
+            
+                <li>Declarar una variable "global" de tipo <b><a href="http://ricardmarxer.com/fisica/reference/fisica/FWorld.html#FWorld" target="_blank">FWorld</a></b></li>
+                <li>Definir la variable en el setup() después de inicializar Fisica.</li>
+                <li><i>Por defecto</i> el tamaño del mundo es 3x el del sketch.</li>
+                <li>Los cuerpos que salen del mundo dejan de simularse</li>
+                        
+            </ul>
+            
+            <br>
+            
+            <div class="code" contenteditable="true">
+            <pre>
+import fisica.*;
+
+FWorld mundo;
+
+void setup() {
+  size(400, 400);
+  
+  Fisica.init(this);
+  mundo = new FWorld();
+}</pre>
+            </div>
+
+            
+            
+      
+      </article>  
+  
+  
+      <article>
+      
+        <h3>Ejecución y dibujado del mundo</h3>
+        
+            <ul>
+            
+                <li>Llamar las funciones <b><a href="http://ricardmarxer.com/fisica/reference/fisica/FWorld.html#step()" target="_blank">step()</a></b> y <b><a href="http://ricardmarxer.com/fisica/reference/fisica/FWorld.html#draw()" target="_blank">draw()</a></b> del mundo en el draw()</li>
+                <li><i>Por defecto</i> step() considera un incremento de tiempo de 1/60 de segundo</li>
+                <li><i>Por defecto</i> draw() dibuja en nuestro sketch</li>
+                        
+            </ul>
+            
+            <br>
+            
+            <div class="code" contenteditable="true">
+            <pre>
+void draw() {
+  mundo.step();
+  mundo.draw();
+}</pre>
+            </div>
+
+            <br>
+
+            <ul>
+            
+                <li>FWorld.draw() no borra el fondo, debemos llamar background()</li>
+                <li>También se puede realizar un dibujado esquemático y explicativo del mundo con <b><a href="http://ricardmarxer.com/fisica/reference/fisica/FWorld.html#drawDebug()" target="_blank">drawDebug()</a></b></li>
+         
+            </ul>
+      
+      </article>  
+  
+  
+  
+      <article>
+      
+        <h3>El primer cuerpo</h3>
+        
+            <ul>
+            
+                <li>Declaramos y construimos una variable de tipo <b><a href="http://ricardmarxer.com/fisica/reference/fisica/FBox.html" target="_blank">FBox</a></b></li>
+                <li>Añadimos el cuerpo construido al mundo</li>
+                <li>En este caso creamos y añadimos el cuerpo una sola vez al principio (en el setup())</li>
+        
+            </ul>
+            
+            <br>
+
+            <div class="code" contenteditable="true">
+            <pre>
+void setup() {
+  // ...
+  FBox b = new FBox(30, 50);
+  b.setPosition(width/2, height/2);
+  mundo.add(b);
+}</pre>
+            </div>
+            
+            <br>
+            
+            <ul>
+            
+                <li><i>Por defecto</i> 20 píxeles == 1 metro.  Se puede cambiar llamando <b><a href="http://ricardmarxer.com/fisica/reference/fisica/Fisica.html#setScale(float)" target="_blank">Fisica.setScale()</a></b> justo después del Fisica.init(this)</li>
+                
+                <li><i>Por defecto</i> el mundo tiene gravedad.  Se puede cambiar llamando <b><a href="http://ricardmarxer.com/fisica/reference/fisica/FWorld.html#setGravity(float, float)" target="_blank">mundo.setGravity()</a></b> sobre nuestro mundo</li>
+
+                <li>El cuerpo se "cae" de la pantalla</li>
+                        
+            </ul>
+
+      
+      </article>   
+
+      
+      <article>
+      
+        <h3>Añadiendo bordes al mundo</h3>
+        
+            <ul>
+            
+                <li>Llamamos <b><a href="http://ricardmarxer.com/fisica/reference/fisica/FWorld.html#setEdges()" target="_blank">setEdges()</a></b> sobre nuestro mundo en el setup()</li>
+                <li>Esto crea cuatro cuerpos estáticos de tipo FBox que limitan el mundo en los bordes del sketch</li>
+                <li>Estos cuerpos son accessibles: mundo.left, mundo.right, mundo.bottom, mundo.top</li>
+                <li>Podemos quitar los que no queremos</li>
+                <li><i>Por defecto</i> estos cuerpos son negros</li>
+                        
+            </ul>
+            
+            <br>
+            
+            <div class="code" contenteditable="true">
+            <pre>
+void setup() {
+  // ...
+  
+  mundo.setEdges();
+  mundo.remove(mundo.top);
+}</pre>
+            </div>
+            
+            <br>
+
+            <ul>
+                <li><i>Por defecto</i> los cuerpos moviles se pueden agarrar con el ratón</li>        
+            </ul>
+      
+      </article>   
+
+      
+      <article>
+      
+        <h2>El mundo</h2>
+      
+      </article>
+
+      <article>
+      
+        <h3>Propiedades y Acciones</h3>
+            <ul>
+            
+                <li><b>Bordes</b>: se pueden modificar algunas de las propiedades de los bordes
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FWorld.html#setEdgesFriction(float)" target="_blank">mundo.setEdgesFriction(0)</a></b></pre>
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FWorld.html#setEdgesRestitution(float)" target="_blank">mundo.setEdgesRestitution(1)</a></b></pre>
+                </li>
+                <li><b>Gravedad</b>: el mundo tiene una fuerza de gravedad que afecta a todos los cuerpos móviles.  Se puede modificar
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FWorld.html#setGravity(float, float)" target="_blank">mundo.setGravity(0, -100)</a></b></pre>
+                </li>
+                <li><b>Agarrables</b>: los cuerpos del mundo se pueden agarrar con el ratón.  Esto se puede evitar
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FWorld.html#setGrabbable(boolean)" target="_blank">mundo.setGrabbable(false)</a></b></pre>
+                </li>
+                <li><b>Cuerpo en un punto</b>: se le puede pedir el cuerpo (o los cuerpos) que se encuentra en un punto determinado del mundo
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FWorld.html#getBody(float, float)" target="_blank">mundo.getBody(200, 200)</a></b></pre>
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FWorld.html#getBodies(float, float)" target="_blank">mundo.getBodies(200, 200)</a></b></pre>
+                </li>                
+                <li><b>Limpiar</b>: se pueden quitar todos los cuerpos y juntas del mundo
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FWorld.html#clear()" target="_blank">mundo.clear()</a></b></pre>
+                </li>
+
+            </ul>
+      
+      </article> 
+      
+  
+      <article>
+      
+        <h2>Los cuerpos</h2>
+      
+      </article>
+  
+  
+  
+      <article>
+      
+        <h3>FBox - La caja</h3>
+        
+            <ul>
+            
+                <li>Variables de tipo <b><a href="http://ricardmarxer.com/fisica/reference/fisica/FBox.html" target="_blank">FBox</a></b></li>
+                <li>Cuerpos en forma de rectangulo</li>
+                <li>Constructor de 2 argumentos: ancho, alto</li>
+                
+            </ul>
+            
+            <br>
+            
+            <div class="code" contenteditable="true">
+            <pre>
+FBox b = new FBox(30, 50);
+b.setPosition(100, 100);
+mundo.add(b);</pre>
+            </div>
+
+            <br>
+
+            <ul>
+                <li>Las dimensiones del rectangulo se pueden modificar</li>        
+            </ul>
+            
+            <div class="code" contenteditable="true">
+            <pre>
+b.setWidth(40);
+b.setHeight(40);</pre>
+            </div>
+      
+      </article>   
+  
+  
+      <article>
+      
+        <h3>FCircle - El círculo</h3>
+        
+            <ul>
+            
+                <li>Variables de tipo <b><a href="http://ricardmarxer.com/fisica/reference/fisica/FCircle.html" target="_blank">FCircle</a></b></li>
+                <li>Cuerpos en forma círculo</li>
+                <li>Constructor de 1 argumento: diametro</li>
+                
+            </ul>
+            
+            <br>
+            
+            <div class="code" contenteditable="true">
+            <pre>
+FCircle c = new FCircle(30);
+c.setPosition(200, 100);
+mundo.add(c);</pre>
+            </div>
+
+            <br>
+
+            <ul>
+                <li>Las dimensiones del círculo se pueden modificar</li>        
+            </ul>
+            
+            <div class="code" contenteditable="true">
+            <pre>
+c.setSize(40);</pre>
+            </div>
+      
+      </article>   
+
+  
+  
+      <article>
+      
+        <h3>FPoly - El polígono</h3>
+        
+            <ul>
+            
+                <li>Variables de tipo <b><a href="http://ricardmarxer.com/fisica/reference/fisica/FPoly.html" target="_blank">FPoly</a></b></li>
+                <li>Cuerpos en forma de polígono</li>
+                <li>Constructor sin argumentos</li>
+                
+            </ul>
+            
+            <br>
+            
+            <div class="code" contenteditable="true">
+            <pre>
+FPoly p = new FPoly();
+p.vertex(-30, -20);
+p.vertex( 30, -20);
+p.vertex( 30, 0);
+p.vertex( 10, 0);
+p.vertex( 10, 40);
+p.vertex(-10, 40);
+p.vertex(-10, 0);
+p.vertex(-30, 0);
+p.setPosition(300, 100);
+mundo.add(p);</pre>
+            </div>
+
+            <br>
+
+            <ul>
+                <li>setPosition(x, y) posiciona el punto 0, 0 del cuerpo en el punto x, y del canvas</li>        
+            </ul>
+      
+      </article>   
+
+  
+      <article>
+      
+        <h3>FLine - La línea</h3>
+        
+            <ul>
+            
+                <li>Variables de tipo <b><a href="http://ricardmarxer.com/fisica/reference/fisica/FLine.html" target="_blank">FLine</a></b></li>
+                <li>Cuerpos en forma de linea</li>
+                <li>Siempre són cuerpos estáticos</li>
+                <li>Constructor de 4 argumento: inicioX, inicioY, finalX, finalY</li>
+                
+            </ul>
+            
+            <br>
+            
+            <div class="code" contenteditable="true">
+            <pre>
+FLine l = new FLine(-150, 0, 150, 0);
+l.setPosition(width/2, 250);
+mundo.add(l);</pre>
+            </div>
+
+            <br>
+
+            <ul>
+                <li>setPosition(x, y) posiciona el punto 0, 0 de la línea en el punto x, y del canvas</li>
+                <li>Los cuerpos solo colisionan con las líneas en una dirección</li>        
+                <li>Los puntos iniciales y finales se pueden modificar</li>        
+            </ul>
+            
+            <div class="code" contenteditable="true">
+            <pre>
+l.setStart(150, 0);
+l.setEnd(width-150, 0);</pre>
+            </div>
+      
+      </article>   
+
+      
+      <article>
+      
+        <h3>FCompound - El compuesto</h3>
+        
+            <ul>
+            
+                <li>Variables de tipo <b><a href="http://ricardmarxer.com/fisica/reference/fisica/FCompund.html" target="_blank">FCompound</a></b></li>
+                <li>Cuerpos compuestos de otros cuerpos</li>
+                <li>Constructor sin argumentos</li>
+                
+            </ul>
+            
+            <br>
+            
+            <div class="code" contenteditable="true">
+            <pre>
+FBox m1 = new FBox(6, 60);
+
+FCircle m2 = new FCircle(20);
+m2.setPosition(0, -30);
+
+FCompound m = new FCompound();
+m.addBody(m1);
+m.addBody(m2);
+m.setPosition(200, 300);
+mundo.add(m);</pre>
+            </div>
+      </article>   
+      
+      
+      <article>
+      
+        <h2>Propiedades comunes de los cuerpos</h2>
+      
+      </article>
+
+      <article>
+      
+        <h3>Propiedades de la Dinámica</h3>
+            <ul>
+            
+                <li><b>Posición</b>: posición en píxeles
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FBody.html#setPosition(float, float)" target="_blank">cuerpo.setPosition(100, 200)</a></b></pre>
+                </li>
+                <li><b>Rotación</b>: rotación en radianes
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FBody.html#setRotation(float)" target="_blank">cuerpo.setRotation(PI/4)</a></b></pre>
+                </li>
+                <li><b>Velocidad</b>: velocidad en píxeles por segundo
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FBody.html#setVelocity(float, float)" target="_blank">cuerpo.setVelocity(50, 0)</a></b></pre>
+                </li>
+                <li><b>Velocidad Angular</b>: velocidad de rotación en radianes por segundo 
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FBody.html#setAngularVelocity(float)" target="_blank">cuerpo.setAngularVelocity(PI/16)</a></b></pre>
+                </li>
+                
+            </ul>
+      
+      </article> 
+
+      <article>
+      
+        <h3>Propiedades Materiales</h3>
+        
+            <ul>
+            
+                <li><b>Densidad</b>: densidad de masa del objeto en gramos por píxel al cuadrado
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FBody.html#setDensity(float)" target="_blank">cuerpo.setDensity(0.3)</a></b></pre>
+                </li>
+                <li><b>Restitución</b>: pérdida de velocidad durante el <b>rebote</b> (componente perpendicular de una colisión)  [valor de 0 a 1]
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FBody.html#setRestitution(float)" target="_blank">cuerpo.setRestitution(0.3)</a></b></pre>
+                </li>
+                <li><b>Fricción</b>: pérdida de velocidad durante el <b>rozamiento</b> (componente tangencial de una colisión)  [valor de 0 a 1]
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FBody.html#setFriction(float)" target="_blank">cuerpo.setFriction(0.3)</a></b></pre>
+                </li>
+                <li><b>Amortiguación</b>: pérdida de velocidad durante el <b>movimiento</b>  [valor de 0 a 1]
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FBody.html#setDamping(float)" target="_blank">cuerpo.setDamping(0.3)</a></b></pre>
+                </li>
+                <li><b>Amortiguación Angular</b>: pérdida de velocidad durante la <b>rotación</b>  [valor de 0 a 1]
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FBody.html#setAngularDamping(float)" target="_blank">cuerpo.setAngularDamping(0.3)</a></b></pre>
+                </li>
+                
+            </ul>
+
+      </article> 
+
+      <article>
+      
+        <h3>Propiedades De Estilo (Dibujado)</h3>
+        
+            <ul>
+            
+                <li><b>Color de Relleno</b>: color de relleno del cuerpo, mismo formato que Processing
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FBody.html#setFill(int, int, int)" target="_blank">cuerpo.setFill(100, 20, 130)</a></b></pre>
+                </li>
+                <li><b>Color de Trazado</b>:  color de trazado del cuerpo, mismo formato que Processing
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FBody.html#setStroke(int)" target="_blank">cuerpo.setStroke(100, 20, 130)</a></b></pre>
+                </li>
+                <li><b>Grueso de Trazado</b>: grueso de trazado del cuerpo, mismo formato que Processing
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FBody.html#setStrokeWeight(int)" target="_blank">cuerpo.setFriction(0.3)</a></b></pre>
+                </li>
+                <li><b>Imagen</b>: dibujar el cuerpo mediante una imagen
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FBody.html#attachImage(processing.core.PImage)" target="_blank">PImage imagen = loadImage("canica.png");<br>cuerpo.attachImage(imagen)</a></b></pre>
+                </li>
+                
+            </ul>
+
+      </article> 
+
+      <article>
+      
+        <h3>Otras Propiedades - I</h3>
+        
+            <ul>
+            
+                <li><b>Dinámico</b>: el cuerpo es dinámico, se puede mover libremente
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FBody.html#setStatic(boolean)" target="_blank">cuerpo.setStatic(true)</a></b></pre>
+                </li>
+                <li><b>Girable</b>: el cuerpo puede girar sobre sí mismo libremente
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FBody.html#setRotatable(boolean)" target="_blank">cuerpo.setRotatable(false)</a></b></pre>
+                </li>
+                <li><b>Dormible</b>: el cuerpo entran en un estado durmiente (deja de simularse) cuando no se mueven ni tienen contactos durante un rato
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FBody.html#setAllowSleeping(boolean)" target="_blank">cuerpo.setAllowSleeping(false)</a></b></pre>
+                </li>
+                <li><b>Agarrable</b>: el cuerpo puede agarrar con el ratón
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FBody.html#setGrabbable(boolean)" target="_blank">cuerpo.setGrabbable(false)</a></b></pre>
+                </li>
+                <li><b>Dibujable</b>: todos los cuerpos de un mundo se dibujan cuando se dibuja el mundo
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FBody.html#setDrawable(boolean)" target="_blank">cuerpo.setDrawable(false)</a></b></pre>
+                </li>
+
+            </ul>
+
+      </article> 
+
+      <article>
+      
+        <h3>Otras Propiedades - II</h3>
+        
+            <ul>
+                <li><b>Sensor</b>:  el cuerpo entra en contacto y colisiona con otros cuerpos.  Se puede evitar que colisione manteniendo la detección de contactos.  Útil para saber si un cuerpo entra en contacto con una región
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FBody.html#setSensor(boolean)" target="_blank">cuerpo.setSensor(true)</a></b></pre>
+                </li>
+                <li><b>Etiquetas</b>: a veces es muy útil darle etiquetas a los cuerpos para comprobar contactos, etc...
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FBody.html#setName(String)" target="_blank">cuerpo.setName("agujero")</a></b></pre>
+                </li>
+                <li><b>Grupos</b>: por defecto todos los cuerpos contactan con todos.  Se pueden definir grupos para controlar ciertos contactos.  Cuerpos pertenecientes a un grupo negativo no contactarán con cuerpos de su mismo grupo
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FBody.html#setGroupIndex(int)" target="_blank">cuerpo.setGroupIndex(-1)</a></b></pre>
+                </li>
+                <li><b>Categorías o filtros</b>: Se pueden definir las categorías a las que pertenece un cuerpo y las categoría con las que debe contactar.  Pero se requiere conocimientos en máscaras binarias
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FBody.html#setCategoryBits(int)" target="_blank">cuerpo.setCategoryBits(0x0002) // 0x0002  == 0000 0000 0000 0010 </a></b></pre>
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FBody.html#setFilterBits(int)" target="_blank">cuerpo.setFilterBits(0x0004) // 0x0004  == 0000 0000 0000 0100</a></b></pre>
+                </li>
+
+            </ul>
+
+      </article> 
+
+      <article>
+      
+        <h3>Acciones sobre los Cuerpos</h3>
+        
+            <ul>
+            
+                <li><b>Impulso</b>: aplicar un impulso (similar a un golpe)
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FBody.html#addImpulse(float, float)" target="_blank">cuerpo.addImpulse(100, 0)</a></b></pre>
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FBody.html#addImpulse(float, float, float, float)" target="_blank">cuerpo.addImpulse(100, 0, 0, 40)</a></b></pre>
+                </li>
+                <li><b>Fuerza</b>: aplicar una fuerza (similar a empujar, solemos querer aplicarla durante un tiempo)
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FBody.html#addForce(float, float)" target="_blank">cuerpo.addForce(100, 0)</a></b></pre>
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FBody.html#addForce(float, float, float, float)" target="_blank">cuerpo.addForce(100, 0, 0, 40)</a></b></pre>
+                </li>
+                <li><b>Fuerza Angular</b>: añadir una fuerza angular (de torsión)
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FBody.html#addTorque(float)" target="_blank">cuerpo.addTorque(PI/6)</a></b></pre>
+                </li>
+                <li><b>Dibujado</b>: dibujar el cuerpo.  De especial interés cuando un cuerpo no ha sido añadido al mundo
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FBody.html#draw()" target="_blank">cuerpo.draw()</a></b></pre>
+                </li>
+                <li><b>Dibujado Técnico</b>: dibujar el estado del cuerpo.  De especial interés cuando se está desarrollando una aplicación
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FBody.html#drawDebug()" target="_blank">cuerpo.drawDebug()</a></b></pre>
+                </li>
+                
+            </ul>
+
+      </article> 
+      
+      <article>
+      
+        <h2>Las juntas</h2>
+      
+      </article>
+      
+      <article>
+      
+        <h3>FDistanceJoint - El muelle</h3>
+        
+            <ul>
+            
+                <li>Variables de tipo <b><a href="http://ricardmarxer.com/fisica/reference/fisica/FDistanceJoint.html" target="_blank">FDistanceJoint</a></b></li>
+                <li>Juntas de tipo muelle</li>
+                <li>Constructor de 2 argumentos: cuerpo1, cuerpo2</li>
+                
+            </ul>
+            
+            <br>
+            
+            <div class="code" contenteditable="true">
+            <pre>
+FBox b1 = new FBox(70, 20);
+b1.setPosition(100, 100);
+mundo.add(b1);
+FBox b2 = new FBox(20, 50);
+b2.setPosition(300, 100);
+mundo.add(b2);
+FDistanceJoint muelle = new FDistanceJoint(b1, b2);
+mundo.add(muelle);</pre>
+            </div>
+
+      </article>
+      
+      <article>
+      
+        <h3>FDistanceJoint - El muelle - Propiedades</h3>
+        
+            <ul>
+            
+                <li><i>Por defecto</i> el muelle se engancha al centro del primer (y segundo) cuerpo.  Se puede enganchar a cualquier posición relativa al centro
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FDistanceJoint.html#setAnchor1(float, float)" target="_blank">muelle.setAnchor1(30, 0)</a></b></pre>
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FDistanceJoint.html#setAnchor2(float, float)" target="_blank">muelle.setAnchor2(0, 40)</a></b></pre>
+                </b></li>
+                <li><i>Por defecto</i> el muelle es rígido.  Puede ser elástico, con control sobre su frecuencia y amortiguación
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FDistanceJoint.html#setFrequency(float)" target="_blank">muelle.setFrequency(0.5)</a></b></pre>
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FDistanceJoint.html#setDamping(float)" target="_blank">muelle.setDamping(0.1)</a></b></pre>
+                </li>
+                <li><i>Por defecto</i> el tamaño de equilibrio del muelle es la distáncia entre los cuerpos.  Puede ser de un tamaño arbitrario
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FDistanceJoint.html#setLength(float)" target="_blank">muelle.setLength(60)</a></b></pre>
+                </li>
+                
+            </ul>
+            
+      </article>   
+
+      <article>
+      
+        <h3>FPrismaticJoint - El pistón</h3>
+        
+            <ul>
+            
+                <li>Variables de tipo <b><a href="http://ricardmarxer.com/fisica/reference/fisica/FPrismaticJoint.html" target="_blank">FPrismaticJoint</a></b></li>
+                <li>Juntas de tipo pistón</li>
+                <li>Constructor de 2 argumentos: cuerpo1, cuerpo2</li>
+                <li>Lo más común es usarlo con un cuerpo estático y otro móvil</li>
+                
+            </ul>
+            
+            <br>
+            
+            <div class="code" contenteditable="true">
+            <pre>
+FBox b2 = new FBox(20, 50);
+b2.setPosition(300, 100);
+mundo.add(b2);
+FPrismaticJoint piston = new FPrismaticJoint(mundo.bottom, b2);
+mundo.add(piston);</pre>
+            </div>
+
+      </article>
+      
+      <article>
+      
+        <h3>FPrismaticJoint - El pistón - Propiedades</h3>
+        
+            <ul>
+            
+                <li><i>Por defecto</i> el pistón tiene una orientación vertical.  El pistón se puede orientar en cualquier dirección
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FPrismaticJoint.html#setAxis(float, float)" target="_blank">piston.setAxis(1, 0)</a></b></pre>
+                </b></li>
+                <li><i>Por defecto</i> no esta limitado el movimiento sobre el pistón.  Se puede limitar
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FPrismaticJoint.html#setEnableLimit(boolean)" target="_blank">piston.setEnableLimit(true)</a></b></pre>
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FPrismaticJoint.html#setLowerTranslation(float)" target="_blank">piston.setLowerTranslation(-50)</a></b></pre>
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FPrismaticJoint.html#setUpperTranslation(float)" target="_blank">piston.setUpperTranslation(150)</a></b></pre>
+                </li>
+                
+            </ul>
+            
+      </article>
+
+      <article>
+        <h3>FRevoluteJoint - El eje</h3>
+        
+            <ul>
+            
+                <li>Variables de tipo <b><a href="http://ricardmarxer.com/fisica/reference/fisica/FRevoluteJoint.html" target="_blank">FRevoluteJoint</a></b></li>
+                <li>Juntas de tipo eje de revolución</li>
+                <li>Constructor de 2 argumentos: cuerpo1, cuerpo2</li>
+                
+            </ul>
+            
+            <br>
+            
+            <div class="code" contenteditable="true">
+            <pre>
+FBox b1 = new FBox(70, 20);
+b1.setPosition(100, 100);
+mundo.add(b1);
+FBox b2 = new FBox(20, 50);
+b2.setPosition(300, 100);
+mundo.add(b2);
+FRevoluteJoint eje = new FRevoluteJoint(b1, b2);
+mundo.add(eje);</pre>
+            </div>
+
+      </article>
+      
+      <article>
+      
+        <h3>FRevoluteJoint - El eje - Propiedades</h3>
+        
+            <ul>
+            
+                <li><i>Por defecto</i> el eje de rotación se encuentra en el punto medio entre los dos cuerpos.  Se puede posicionar en cualquier punto absoluto del canvas
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FRevoluteJoint.html#setAnchor(float, float)" target="_blank">eje.setAnchor(width/2, height/2)</a></b></pre>
+                </b></li>
+                <li><i>Por defecto</i> no esta limitado el movimiento alrededor del eje.  Se puede limitar
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FRevoluteJoint.html#setEnableLimit(boolean)" target="_blank">eje.setEnableLimit(true)</a></b></pre>
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FRevoluteJoint.html#setLowerAngle(float)" target="_blank">eje.setLowerAngle(-PI/4)</a></b></pre>
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FRevoluteJoint.html#setUpperAngle(float)" target="_blank">eje.setUpperAngle(PI/4)</a></b></pre>
+                </li>
+                
+            </ul>
+            
+      </article>
+      
+      <article>
+      
+        <h2>Propiedades comunes de las juntas</h2>
+      
+      </article>
+
+      <article>
+      
+        <h3>Propiedades de la Dinámica</h3>
+            <ul>
+            
+                <li><b>Colisión</b>: los cuerpos unidos por esta junto colisionan entre sí.  Se puede evitar
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FJoint.html#setCollideConnected(boolean)" target="_blank">junta.setCollideConnected(false)</a></b></pre>
+                </li>
+                <li><b>Fuerza de Reacción</b>: la fuerza de translación de reacción que ejerce la junta sobre el segundo cuerpo
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FBody.html#getReactionForceX()" target="_blank">junta.getReactionForceX()</a></b></pre>
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FBody.html#getReactionForceY()" target="_blank">junta.getReactionForceY()</a></b></pre>
+                </li>
+                <li><b>Fuerza Angular de Reacción</b>: la fuerza angular (de torsión) de reacción que ejerce la junta sobre el segundo cuerpo
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FBody.html#setVelocity(float, float)" target="_blank">junta.getReactionTorque()</a></b></pre>
+                </li>
+                
+            </ul>
+      
+      </article>
+
+  
+      <article>
+      
+        <h2>Los contactos</h2>
+      
+      </article>
+  
+  
+      <article>
+      
+        <h3>Los Contactos son Eventos</h3>
+        
+            <ul>
+            
+                <li>Funcionamiento similar a los eventos de ratón de Processing</li>
+                <li>Funciones de contacto
+                  <pre><b>void contactStarted(FContact contacto) { // codigo a ejecutar  }</b></pre>
+                  <pre><b>void contactPersisted(FContact contacto) { // codigo a ejecutar }</b></pre>
+                  <pre><b>void contactEnded(FContact contacto) { // codigo a ejecutar }</b></pre>
+                </li>                
+            </ul>
+            
+            <br>
+            
+            <div class="code" contenteditable="true">
+            <pre>
+// Las variables...
+
+void setup() {
+   // El setup...
+}
+
+void draw() {
+   // El draw...
+}
+
+void contactStarted(FContact contacto) {
+   println("Ha empezado una colisión");
+}
+</pre>
+            </div>
+
+      </article>
+
+      
+      <article>
+      
+        <h3>No Todo Vale en los Contactos</h3>
+        
+            <ul>
+            
+                <li>Muchas acciones no están permitidas durante los contactos en JBox2D (e.g. añadir/quitar cuerpos al mundo)</li>
+                <li><b>Pero</b> en Fisica lo solucionamos.  Si encontrais alguna acción no válida, avisad!!</li>                
+            </ul>
+            
+      </article>
+      
+      <article>
+      
+        <h3>Las Propiedades de los Contactos</h3>
+            <ul>
+                <li><b>Los Cuerpos</b>: los dos cuerpos del contacto
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FContact.html#getBody1()" target="_blank">contacto.getBody1()</a></b></pre>
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FContact.html#getBody2()" target="_blank">contacto.getBody2()</a></b></pre>
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FContact.html#contains(String, String)" target="_blank">contacto.contains("bola", "agujero")  // se puede pedir por etiqueta</a></b></pre>
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FContact.html#contains(FBody)" target="_blank">contacto.contains(cuerpo)  // se puede pedir por variable</a></b></pre>
+                </li>
+                <li><b>Punto de Contacto</b>: el punto donde entran en contacto
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FContact.html#getX()" target="_blank">contacto.getX()</a></b></pre>
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FContact.html#getY()" target="_blank">contacto.getY()</a></b></pre>
+                </li>
+                <li><b>Dirección</b>: la dirección del contacto (el vector normal del contacto)
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FContact.html#getNormalX()" target="_blank">contacto.getNormalX()</a></b></pre>
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FContact.html#getNormalY()" target="_blank">contacto.getNormalY()</a></b></pre>
+                </li>
+                <li><b>Velocidad</b>: la velocidad del contacto (velocidad relativa entre los dos cuerpos)
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FContact.html#getVelocityX()" target="_blank">contacto.getVelocityX()</a></b></pre>
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FContact.html#getVelocityY()" target="_blank">contacto.getVelocityY()</a></b></pre>
+                </li>
+                <li><b>Separación</b>: la simulación no es perfecta, siempre puede existir una cierta separación (o penetración) entre los cuerpos
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FContact.html#getSeparation()" target="_blank">contacto.getSeparation()</a></b></pre>
+                </li>
+            </ul>
+
+      </article>
+  
+      <article>
+      
+        <h3>Otra Forma de Acceso a los Contactos</h3>
+        
+            <ul>
+            
+                <li>Los contactos se le pueden pedir al cuerpo
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FBody.html#getContacts()" target="_blank">cuerpo.getContacts()</a></b></pre>
+                </li>
+                <li>También se le puede pedir si está tocando un determinado cuerpo
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FBody.html#isTouchingBody(FBody)" target="_blank">cuerpo.isTouchingBody(otroCuerpo)</a></b></pre>
+                </li>
+                <li>O bien pedirle los cuerpos que está tocando
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FBody.html#getTouching()" target="_blank">cuerpo.getTouching()</a></b></pre>
+                </li>
+                
+            </ul>
+            
+      </article>
+  
+
+      <article>
+        <h3>Gracias</h1>
+        
+          <div class="presenter">
+            
+  
+            <p>
+                Ricard Marxer
+            </p>
+            
+            <p class="link"><a href="mailto:email@ricardmarxer.com">email@ricardmarxer.com</a></p><p class="link"><a href="http://ricardmarxer.com">ricardmarxer.com</a></p><p class="link"><a href="http://twitter.com/ricardmp">@ricardmp</a></p>
+          </div>
+        
+      </article>
+      
+      
+      
+      <article>
+      
+        <h2>Temas Avanzados</h2>
+      
+      </article>
+      
+      <article>
+      
+        <h3>Cuerpos Customizados</h3>
+            <ul>
+                <li>En muchos casos los cuerpos no se dibujan exactamente como queremos</li>
+                <li>Podemos crear nuestras propias clases que heredan del cuerpo más parecido y que se dibujan como queremos</li>                
+            </ul>
+                        
+            <div class="code" contenteditable="true">
+            <pre>
+class Smiley extends FCircle {
+  Smiley(float diam){
+    super(diam);
+  }
+  
+  void draw(PGraphics gfx) {
+    super.draw(gfx);
+    float diam = getSize();
+    
+    preDraw(gfx);
+    gfx.ellipse(diam*0.2, -diam*0.2, diam*0.05, diam*0.05);
+    gfx.ellipse(-diam*0.2, -diam*0.2, diam*0.05, diam*0.05);
+    gfx.noFill();
+    gfx.arc(0, 0, diam*0.6, diam*0.6, 0, PI);
+    postDraw(gfx);
+  }
+}</pre>
+            </div>
+
+      </article>
+      
+      
+      <article>
+      
+        <h3>FBlob - Las Burbuja</h3>
+            <ul>
+                <li>Variables de tipo <b><a href="http://ricardmarxer.com/fisica/reference/fisica/FBlob.html" target="_blank">FBlob</a></b></li>
+                <li>Un compuesto de cuerpos y una junta especial</li>
+                <li>Junta de tipo <a href="http://ricardmarxer.com/fisica/reference/fisica/FConstantVolumeJoint.html" target="_blank">FConstantVolumeJoint</a>.  La junta mantiene constante, mediante muelles, el volumen entre los cuerpos</li>
+                <li>Se le puede dar una forma inicial circular</li>                
+                <li>También se le puede dar una forma inicial arbitraria</li>   
+                <li><i>Por defecto</i> los cuerpos són de tipo FCircle. También se puede crear con cuerpos arbitrarios</li>                
+            </ul>
+                        
+            <div class="code" contenteditable="true">
+            <pre>
+FBlob b = new FBlob();
+b.setAsCircle(100, 150, 50);
+mundo.add(b);
+</pre>
+            </div>
+
+      </article>
+      
+      <article>
+      
+        <h3>Cadenas</h3>
+        
+            <ul>
+                <li>Combinando los cuerpos y juntas básicas se pueden hacer cosas complejas</li>
+            </ul>
+        
+            <div class="code" contenteditable="true">
+            <small><pre>
+void createChain(float x1, float y1, float x2, float y2, int linkCount) {
+  float len = dist(x1, y1, x2, y2);
+  float linkLen = len/linkCount;
+  ArrayList links = new ArrayList();
+  for (int i=0; i&lt;linkCount; i++) {
+    float x = map(i, 0, linkCount-1, x1, x2);
+    float y = map(i, 0, linkCount-1, y1, y2);
+    FBox b = new FBox(linkLen, 8);
+    b.setPosition(x, y);
+    mundo.add(b);
+    links.add(b);
+  }  
+  for (int i=0; i&lt;links.size()-1; i++) {
+    FBody p = (FBody)(links.get(i));
+    FBody n = (FBody)(links.get(i+1)); 
+    FRevoluteJoint rj = new FRevoluteJoint(p, n);
+    rj.setDrawable(false);
+    mundo.add(rj);
+  }
+}
+</pre></small>
+            </div>
+
+      
+      </article>
+        
+      <article>
+      
+        <h3>Raycasts</h3>
+        
+            <ul>
+                <li><b>Rayo</b>: se puede encontrar el primer cuerpo que intersecciona con un segmento (o rayo)
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FWorld.html#raycastOne(float, float, float, float, fisica.FRaycastResult, boolean)" target="_blank">mundo.raycastOne()</a></b></pre>
+                </li>
+                <li><b>Resultado del Rayo</b>: el resultado de lanzar un rayo es una variable de tipo <b><a href="http://ricardmarxer.com/fisica/reference/fisica/FRaycastResult.html" target="_blank">FRaycastResult</a></b></li>
+                <li><b>Posición</b>: el resultado contiene el punto de intersección
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FRaycastResult.html#getX()" target="_blank">resultado.getX()</a></b></pre>
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FRaycastResult.html#getY()" target="_blank">resultado.getY()</a></b></pre>
+                </li>
+                <li><b>Normal</b>: el resultado contiene el vector normal del cuerpo en el punto de intersección con el rayo
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FRaycastResult.html#getNormalX()" target="_blank">resultado.getNormalX()</a></b></pre>
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FRaycastResult.html#getNormalY()" target="_blank">resultado.getNormalY()</a></b></pre>
+                </li>
+
+            </ul>
+            
+            <div class="code" contenteditable="true">
+            <pre>
+FRaycastResult resultado = null;
+FBody b = mundo.raycastOne(width/2, height/2, mouseX, mouseY, resultado, true);
+if (resultado != null) {
+  println("El rayo intersecciona en: " + resultado.getX() + ", " + resultado.getY());
+}
+</pre>
+            </div>
+
+
+      </article>
+
+      <article>
+      
+        <h3>JBox2D</h3>
+            <p>Para todo lo que Fisica no puede hacer</p>
+
+            <ul>
+                <li>Se puede acceder al objeto JBox2D de los cuerpos
+                  <pre>org.jbox2d.dynamics.Body</pre>
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FBody.html#getBox2dBody()" target="_blank">cuerpo.getBox2dBody()</a></b></pre>
+                </li>
+                <li>Se puede acceder al objeto JBox2D de las juntas
+                  <pre>org.jbox2d.dynamics.joints.Joint</pre>
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FJoint.html#getBox2dJoint()" target="_blank">junta.getBox2dJoint()</a></b></pre>
+                </li>
+                <li>Se puede acceder al objeto JBox2D del mundo. Es el mismo que FWorld, ya que hereda de él
+                  <pre>org.jbox2d.dynamics.World</pre>
+                  <pre><b><a href="http://ricardmarxer.com/fisica/reference/fisica/FWorld.html" target="_blank">mundo // hereda de JBox2D World</a></b></pre>
+                </li>
+            </ul>
+
+      </article>
+  </body>
+  <script src='playground.js'></script>
+</html>

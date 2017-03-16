@@ -1,0 +1,632 @@
+<html>
+<head>
+	<title>Geomerative</title>
+ 	<link rel="stylesheet" href="style.css">
+
+        <script type="text/javascript" src="jquery-1.2.2.pack.js"></script>
+        <script type="text/javascript" src="animatedcollapse.js">
+          
+          /***********************************************
+          * Animated Collapsible DIV v2.0- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+          * This notice MUST stay intact for legal use
+          * Visit Dynamic Drive at http://www.dynamicdrive.com/ for this script and 100s more
+          ***********************************************/
+          
+        </script>
+        
+        
+        <script type="text/javascript">
+
+          animatedcollapse.addDiv('overview_content', 'fade=0,speed=400,group=sections,hide=1')
+          animatedcollapse.addDiv('changelog_content', 'fade=0,speed=400,group=sections,hide=1')
+          animatedcollapse.addDiv('tutorials_content', 'fade=0,speed=400,group=sections,hide=1')
+          animatedcollapse.addDiv('documentation_content', 'fade=0,speed=400,group=sections,hide=1')
+          
+          animatedcollapse.init()
+
+        </script>
+</head>
+<body>
+
+<div id="title">
+Geomerative
+</div>
+
+<div id="wrap">
+
+<div id="main">
+<div id="intro">
+<h1>Introduction</h1>
+<div id="intro_content">
+<p>Geomerative is a library for Processing.  It extends 2D geometry operations to facilitate generative geometry. Includes a TrueType font and an SVG interpreters.
+This library exposes the shapes (such as vector drawings or typographies) in a more approchable way.  Geomerative makes it easy to access the paths, the handles and the points, making it easy to develop generative typography and geometry pieces in Processing.</p>
+<p>You may find the old (deprecated) version of Geomerative <a href="http://www.ricardmarxer.com/old_geomerative/documentation">here</a>.</p>
+</div>
+</div>
+
+<div id="download">
+<h1>Download</h1>
+<div id="download_content">
+<p><A href="geomerative.zip">Geomerative (rev 39) for Processing 2.0b8</A> (April 30 2013)</p>
+<p>unzip the contents of this file to /path/to/sketchbook/libraries</p>
+<small><p>use <A href="geomerative-34.zip">this version</A> for Processing 1.*</p></small>
+</div>
+</div>
+
+<div id="credits">
+<h1>Credits</h1>
+<div id="credits_content">
+<dl>
+<dt>Creator:</dt><dd><A href="http://www.ricardmarxer.com">Ricard Marxer</A> <a href="http://www.twitter.com/ricardmp"><img src="http://twitter-badges.s3.amazonaws.com/t_mini-c.png" alt="Follow ricardmp on Twitter"/></a> </dd>
+<dt>Collaborator:</dt><dd><A href="http://www.notlime.com/">Mark Luffel</A></dd>
+<dt>Overview, examples and bug fixes:</dt><dd><A href="http://www.florianjenett.de">Florian Jenett</A></dd>
+</dl>
+
+</div>
+</div>
+
+<div id="works">
+<h1>Works</h1>
+<div id="works_content">
+Geomerative has been used in the following projects:
+<ul>
+<li><A href="http://www.caligraft.com">Caligraft</A></li>
+<li><A href="http://www.trsp.net/cow/">Cascade on Wheels</A></li>
+<li><A href="http://casastristes.org/">Casas Tristes</A></li>
+<li><A href="http://generative-typografie.de/">Generative Typografie</A></li>
+<li><A href="http://www.plagiairc.com">Plagiairc</A></li>
+</ul>
+</div>
+</div>
+
+</div>
+
+<div id="advanced">
+<!--
+<div id="overview">
+<h1><a href="javascript:animatedcollapse.toggle('overview_content')">Overview</a></h1>
+<div id="overview_content">
+The library is composed of 4 basic elements (RShape, RPolygon, RMesh and RGroup) all of which support a set of common methods such as: accessing (getCurvePoints, getPoints,...), transforming (translate, rotate, scale,...), styling (setStroke, setStrokeColor, setStrokeWeight, setFill, setFillColor,...) and drawing (draw).
+
+Additionally the library has 2 interpreters that will allow the user to import shapes from TTF fonts and SVG vector drawings into the library's classes.
+<h2>Elements</h2>
+<h3>RShape</h3>
+<pre>
+/*
+*    geomerative example
+*    http://www.ricardmarxer.com/geomerative
+ *
+ *    fjenett 20080417
+ */
+
+import geomerative.*;
+
+RShape shp;
+
+void setup()
+{
+    size(400,400);
+    smooth();
+    
+    RG.init(this);
+    
+    shp = new RShape();
+    
+    shp.addMoveTo( 0 , 141 );        // zeichenbefehle, vergleiche beginShape, vertex, bezierVertex
+    shp.addLineTo( 2 , 133 );
+    shp.addLineTo( 34 , 133 );
+    shp.addLineTo( 60 , 9 );
+    shp.addLineTo( 38 , 9 );
+    shp.addBezierTo( 20 , 9 , 16 , 12 , 12 , 30 );
+    shp.addLineTo( 9 , 46 );
+    shp.addLineTo( 0 , 46 );
+    shp.addLineTo( 10 , 0 );
+    shp.addLineTo( 123 , 0 );
+    shp.addLineTo( 113 , 46 );
+    shp.addLineTo( 104 , 46 );
+    shp.addLineTo( 107 , 30 );
+    shp.addBezierTo( 111 , 12 , 109 , 9 , 91 , 9 );
+    shp.addLineTo( 69 , 9 );
+    shp.addLineTo( 43 , 133 );
+    shp.addLineTo( 75 , 133 );
+    shp.addLineTo( 73 , 141 );
+    shp.addLineTo( 0 , 141 );
+    shp.addClose();
+}
+
+void draw()
+{
+    background(255);
+    translate(140,120);
+    
+    stroke( 120 );
+    strokeWeight( 3 );
+    fill( 220 );
+
+    shp.draw();
+}
+</pre>
+
+<h3>RPolygon</h3>
+<pre>
+/*
+*    geomerative example
+*    http://www.ricardmarxer.com/geomerative
+*
+*    fjenett 20080417
+*/
+
+import geomerative.*;
+
+RPolygon ply;
+
+void setup()
+{
+    size(400,400);
+    
+    RG.init(this);
+    
+    ply = new RPolygon();
+    
+    for ( int i=0; i<360; i++ )
+    {
+        float rad = radians(i);
+        float rad2 = radians(i*12);
+        ply.addPoint( sin(rad)*120+sin(rad2)*20, cos(rad)*120+cos(rad2)*20 );
+    }
+}
+
+void draw()
+{
+    background(255);
+    translate(width/2,height/2);
+    
+    stroke( 120 );
+    strokeWeight( 3 );
+    fill( 220 );
+
+    ply.draw();
+}
+</pre>
+
+<h3>RMesh</h3>
+<pre>
+/*
+*    geomerative example
+*    http://www.ricardmarxer.com/geomerative
+*
+*    fjenett 20080419
+*/
+
+import geomerative.*;
+
+RMesh msh;
+
+void setup()
+{
+    size(400,400);
+    frameRate( 2 );
+    
+    RG.init(this);
+    
+    strokeWeight( 1.2 );
+}
+
+void draw()
+{
+    background(130);
+    
+    RPolygon pl = RPolygon.createRing( random(80,160), random(10,50), int(random(5,15)) ).toPolygon();
+    msh = pl.toMesh();
+    
+    translate( width/2, height/2 );
+    msh.draw( );
+}
+</pre>
+
+<h3>RGroup</h3>
+<pre>
+/*
+*    geomerative example
+*    http://www.ricardmarxer.com/geomerative
+*
+*    glyphen eines fonts auslesen
+*
+*    fjenett 20080417
+*/
+
+import geomerative.*;
+
+RFont font;
+
+void setup()
+{
+    size(400,400);
+    smooth();
+    
+    RG.init(this);
+
+    font = new RFont( "lucon.ttf", 100, RFont.CENTER);
+}
+
+void draw()
+{
+    background(255);
+    translate(width/2,height/2);
+    
+    RGroup grp = font.toGroup("Hello?");                                // text in ein gruppen-objekt umwandeln
+    
+    for ( int i = 0; i < grp.elements.length; i++ )                     // elemente durchlaufen
+    {
+        RShape shp = grp.elements[i].toShape();                         // gruppen-element in shape-objekt umwandeln
+        
+        for ( int ii = 0; ii < shp.paths.length; ii++ )             // shapes durchlaufen
+        {
+            RPath sushp = shp.paths[ii];                        // path-objekt
+            
+            for ( int iii = 0; iii < sushp.commands.length; iii++ )     // zeichen-kommando-objekte durchlaufen
+            {
+                RPoint[] pnts = sushp.commands[iii].getPoints();        // punkte des kommando-objekts
+                
+                switch( sushp.commands[iii].getCommandType() )          // je nach kommando-art anderern befehl ausfhren
+                {
+                    case RCommand.LINETO:
+                        line( pnts[0].x, pnts[0].y, pnts[1].x, pnts[1].y );
+                        break;
+                    case RCommand.QUADBEZIERTO:    // eigentlich falsch, denn bezier() ist kubisch
+                        bezier( pnts[0].x, pnts[0].y, pnts[1].x, pnts[1].y, pnts[1].x, pnts[1].y, pnts[2].x, pnts[2].y );
+                       break;
+                    case RCommand.CUBICBEZIERTO:
+                        bezier( pnts[0].x, pnts[0].y, pnts[1].x, pnts[1].y, pnts[2].x, pnts[2].y, pnts[3].x, pnts[3].y );
+                       break;
+                }
+            }
+        }
+    }
+}
+</pre>
+<h2>Interpreters</h2>
+<h3>RFont</h3>
+<pre>
+/*
+*    geomerative example
+*    http://www.ricardmarxer.com/geomerative
+*
+*    fjenett 20080417
+*/
+
+import geomerative.*;
+
+RFont font;
+
+void setup()
+{
+    size(400,400);
+    
+    RG.init(this);
+
+    font = new RFont( "lucon.ttf", 72, RFont.LEFT);
+}
+
+void draw()
+{
+    background(0,100,50);
+    translate(width/2-200,height/2-100);
+    
+    font.draw("Hello?");
+}
+</pre>
+<h3>RSVG</h3>
+<pre>
+/*
+*    geomerative example
+*    http://www.ricardmarxer.com/geomerative
+*
+*    fjenett 20080417
+*/
+
+import geomerative.*;
+
+RSVG svg;
+
+void setup()
+{
+    size(800,800);
+    frameRate( 30 );
+    
+    RG.init(this);
+    
+    svg = new RSVG( );
+}
+
+void draw()
+{
+    background(255);
+    svg.draw("hello.svg");
+}
+</pre>
+</div>
+</div>
+-->
+<div id="tutorials">
+<h1><a href="javascript:animatedcollapse.toggle('tutorials_content')">Tutorials</a></h1>
+<div id="tutorials_content">
+The tutorials are not available online yet.  They can be found in the <b>tutorials</b> directory inside the zip file.
+</div>
+</div>
+
+<div id="documentation">
+<h1><a href="javascript:animatedcollapse.toggle('documentation_content')">Documentation</a></h1>
+<div id="documentation_content">
+The documentation is available online <a href="documentation/index.html">here</a>.<br>
+It can also be found in the <b>documentation</b> directory inside the zip file.
+</div>
+</div>
+
+
+<div id="changelog">
+<h1><a href="javascript:animatedcollapse.toggle('changelog_content')">Changelog</a></h1>
+<div id="changelog_content">
+<dl>
+
+<dt>rev 39 (30 - April - 2013):</dt><dd>
+<ul>
+   <li> Small fix the the boolean operations code.</li>
+ </ul>
+</dd>
+
+<dt>rev 38 (8 - March - 2013):</dt><dd>
+<ul>
+   <li> Update to Processing 2.0b8.  Thanks to Antony74 who also made an ant build script!</li>
+   <li> Remove a useless print.</li>
+ </ul>
+</dd>
+
+<dt>rev 37 (20 - November - 2012):</dt><dd>
+<ul>
+   <li> Fix the drawing of multiple contour shapes.</li>
+ </ul>
+</dd>
+
+<dt>rev 36 (7 - October - 2012):</dt><dd>
+<ul>
+   <li> Update to work with Processing 2.0. Thanks to fjenett for some help.</li>
+   <li> Update to work with Processing's Android mode.</li>
+ </ul>
+</dd>
+
+<dt>rev 34 (25 - October - 2010):</dt><dd>
+<ul>
+   <li> Small fix in getTanget(). Thanks to maharishi for reporting.</li>
+ </ul>
+</dd>
+
+<dt>rev 33 (19 - October - 2010):</dt><dd>
+<ul>
+   <li> Small fix to SVG parsing.</li>
+ </ul>
+</dd>
+
+
+<dt>rev 32 (15 - July - 2010):</dt><dd>
+<ul>
+   <li> Parse the width and height of the SVG document and make it available from the shape as width and height attributes.</li>
+ </ul>
+</dd>
+
+
+<dt>rev 31 (13 - July - 2010):</dt><dd>
+<ul>
+   <li> Fixed a bug in the SVG parser. Thanks to "rapatski" for the failing svg file.</li>
+   <li> Added two links to the web.</li>
+ </ul>
+</dd>
+
+<dt>rev 30 (27 - February - 2010):</dt><dd>
+<ul>
+   <li> Add methods for saving shapes <b>RG.saveShape(String filename, RShape shape)</b>.  This saves the shape as an SVG maintaining the groups and hierarchy</li>
+   <li> Add method for getting the closest points between two shapes <b>RClosest RShape.getClosest(RShape other)</b>.</li>
+ </ul>
+</dd>
+
+<dt>rev 29 (27 - December - 2009):</dt><dd>
+<ul>
+   <li> Add methods for getting the intersecting points between shapes <b>RShape.getIntersections(RShape other)</b>.</li>
+   <li> Improve the binary operations so that they are potentially faster (haven't tested yet) and mantain the style of the first shape.</li>
+ </ul>
+</dd>
+
+
+<dt>rev 28 (28 - May - 2009):</dt><dd>
+<ul>
+   <li> Fix bug of lacking vertex in <b>RG.beginShape()/RG.endShape()</b>.</li>
+   <li> Fix error string bug.</li>
+   <li> Again thanks to Florain Jenett and his students for spotting these.</li>
+ </ul>
+</dd>
+
+<dt>rev 27 (18 - May - 2009):</dt><dd>
+<ul>
+   <li> New documentation build system.  Thanks to <b>Florian Jenett</b> for the tips, script and stylesheets.</li>
+   <li> Small fix to a regression introduced in the last revision about the sizes of ellipses in SVG.</li>
+ </ul>
+</dd>
+
+<dt>rev 26 (15 - May - 2009):</dt><dd>
+<ul>
+   <li> Added a fix to <b>RG.polygonize(myShape)</b> when <b>myShape</b> had no root level paths.  Patch provided by <b>Florian Jenett</b>.</li>
+   <li> Fix binary operations of shapes. Now <b>Tutorial 17</b> should work correctly.</li>
+   <li> Modified <b>RG.getEllipse(x, y, w, h)</b> to take <b>width</b> and <b>height</b> as arguments to be consistent with Processing's API.</li>
+   <li> Added <b>RG.getRect(x, y, w, h)</b>.  This returns a rectangle in the form of a <b>RShape</b>.</li>
+   <li> Added <b>RG.getRing(x, y, widthBig, widthSmall)</b>.  This returns a ring in the form of a <b>RShape</b>.</li>
+   <li> Added <b>RG.getStar(x, y, widthBig, widthSmall, spikes)</b>.  This returns a star in the form of a <b>RShape</b>.</li>
+ </ul>
+</dd>
+
+
+<dt>rev 25 (4 - March - 2009):</dt><dd>
+<ul>
+   <li> Modified the behaviour of <b>RG.shape(myShape, x, y, w, h)</b> to match that of Processing's PShape in order to avoid confusion.  If you want the shape to fit in the rect defined by <i>x</i>,  <i>y</i>,  <i>w</i> and  <i>h</i>, use <b>myShape.transform(x, y, w, h)</b>.</li>
+ </ul>
+</dd>
+
+
+<dt>rev 24 (3 - March - 2009):</dt><dd>
+<ul>
+   <li> Added the method <b>RG.createShape(RPoint[][] points)</b> for easy building shapes from arrays of point arrays.</li>
+ </ul>
+</dd>
+
+
+<dt>rev 23 (3 - March - 2009):</dt><dd>
+<ul>
+   <li> Added the so needed <b>getChild(String target)</b> method to RShape.  This method returns an RShape whose <i>id</i> mathces <i>target</i> or <i>null</i> if no match has been found.</li>
+
+ </ul>
+</dd>
+
+
+<dt>rev 22 (25 - February - 2009):</dt><dd>
+<ul>
+   <li> Removed obsolete tutorials and fixed some that were broken.</li>
+   <li> Fixed the PDF output so it is not tesselated (when it can it uses the breakShape() method of the backend).  PDF is still tesselated when using beginRecord()/endRecord() in backends that don't support breakShape() such as OPENGL, P3D and P2D.  In those cases createGraphics() should be used. Look at the Tutorial about SVG to PDF to see how.</li>
+
+ </ul>
+</dd>
+
+
+<dt>rev 21 (19 - February - 2009):</dt><dd>
+<ul>
+   <li> Added the methods <b>.scale(s, p)</b>, <b>.scale(s, x, y)</b>, <b>.scale(sx, sy, p)</b> and <b>.scale(sx, sy, x, y)</b> to allow scaling relative to a given point.</li>
+   <li> Fix the <b>.getArea()</b> method.  It is now calculated using the points of the curve and not the handles and it will not return negative values.</li>
+
+ </ul>
+</dd>
+
+
+<dt>rev 20 (14 - February - 2009):</dt><dd>
+<ul>
+   <li> Added the methods <b>.contains(shp)</b>, <b>.containsBounds(shp)</b>, <b>.containsHandles(shp)</b> and <b>.intersects(shp)</b>, <b>.intersectsBounds(shp)</b>, <b>.intersectsHandles(shp)</b> to all geometric elements.</li>
+
+ </ul>
+</dd>
+
+
+<dt>rev 19 (29 - November - 2008):</dt><dd>
+<ul>
+   <li> Added the methods <b>.getX</b> and <b>.getY()</b> to all geometric elements.  This should finally deprecate the use of .getBounds()</li>
+
+ </ul>
+</dd>
+
+
+<dt>rev 18 (26 - November - 2008):</dt><dd>
+<ul>
+   <li> Major addition of a <b>RG</b> static class that contains most functions available in the library and that resembles more to the Processing way of doing things (RG.loadShape(), RG.loadFont(), RG.beginShape(),...).</li>
+
+   <li> Updated the examples to use the new RG interface.</li>
+
+   <li> Renamed RGeomerative.init() -> RG.init() </li>
+
+   <li> Changed the way getBounds() works.  It now returns an instance of type RRectangle. </li>
+
+   <li> <b>RGroup will soon become deprecated.</b>  Please start using <b>RShape</b> everywhere and it's method <b>children</b>.  This will allow us a smoother transition to Processing's PShape. </li>
+
+ </ul>
+</dd>
+
+
+<dt>rev 15 (06 - October - 2008):</dt><dd>
+<ul>
+   <li> Major bug fixes </li>
+
+   <li> Renamed RSubshape -> RPath </li>
+   <li> Renamed getPoints -> getHandles </li>
+   <li> Renamed getCurvePoints -> getPoints </li>
+
+   <li> Added method <b>getHeight</b> returns the height of a geometric element</li>
+   <li> Added method <b>getWidth</b> returns the width of a geometric element</li>
+   <li> Added method <b>transform</b> rescales the geometric element to fit a rectangle</li>
+
+   <li> Added method <b>contains</b>  takes as input an RPoint returns True if inside the geometric element False otherwise</li>
+
+   <li> Added method <b>split</b> returns an array of RGroup containing the two geometric elements resulting in splitting the geometric element at the advancement passed as input </li>
+   <li> Added method <b>splitPaths</b> returns an array of RGroup containing the two geometric elements resulting in splitting each of the paths of the geometric element at the advancement passed as input </li>
+
+   <li> Added method <b>insertHandle</b> inserts a new handle in the geometric element at the advancement passed as input </li>
+   <li> Added method <b>insertHandleInPaths</b> inserts a new handle in each of the paths of the geometric element at the advancement passed as input </li>
+
+   <li> Added method <b>getPointsInPaths</b> returns an array of arrays of RPoint for the point on each of the paths of the geometric element</li>
+   <li> Added method <b>getHandlesInPaths</b> returns an array of arrays of RPoint for the handle on each of the paths of the geometric element</li>
+   <li> Added method <b>getTangentsInPaths</b> returns an array of arrays of RPoint for the tangent on each of the paths of the geometric element</li>
+
+   <li> <b>Mark Luffel</b> made the clipping (used for the binary operations and for rendering in OPENGL) faster and better </li>
+   <li> <b>Mark Luffel</b> made the buildsystem using Makefile </li>
+ </ul>
+</dd>
+
+<dt>rev 12 (05 - May - 2008):</dt><dd>
+<ul>
+   <li> Partial support for SVG styles </li>
+   <li> Fixes in SVG commands: line, polyline, path, etc... </li>
+ </ul>
+</dd>
+
+<dt>rev 11 (28 - April - 2008):</dt><dd>
+<ul>
+   <li> Partial support for SVG transformations </li>
+   <li> Partial support for SVG commands: line, polyline, path, etc... </li>
+   <li> Introduction of RGeomerative.init(PApplet applet) </li>
+ </ul>
+</dd>
+</dl>
+</div>
+</div>
+
+<br/>
+<br/>
+<div id="sustain">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-4769628660869583";
+/* Geomerative */
+google_ad_slot = "5479170362";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+</div>
+
+</div>
+
+</body>
+
+<!-- by Twitter Follow Me Box v1.1 --> 
+<script type='text/javascript' src='http://www.ricardmarxer.com/blog/wp-includes/js/jquery/jquery.js?ver=1.4.2'></script>
+<script type="text/javascript"> 
+//<![CDATA[
+jQuery(document).ready(function(){
+jQuery("body").append("<div id=\"tfmBox\"></div>");
+jQuery("#tfmBox").css({'position' : 'fixed', 'top' : '130px', 'width' : '30px', 'height' : '119px', 'z-index' : '1000', 'cursor' : 'pointer', 'background' : '#000000 url(http://www.ricardmarxer.com/blog/wp-content/plugins/twitter-follow-me-box/follow-me.png) no-repeat scroll left top', 'right' : '0'});
+jQuery("#tfmBox").click(function () { 
+    window.open('http://twitter.com/ricardmp/');
+    });
+});
+//]]>
+</script> 
+<!-- /by Twitter Follow Me Box -->
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-312817-2");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+</html>

@@ -1,0 +1,4 @@
+<area shape="rect" href="$classFilter.html" title="Algorithm to apply one or several IIR filters given the Real value coefficients." alt="" coords="5,96,56,123">
+<area shape="rect" href="$classAutocorrelation.html" title="Algorithm to perform an autocorrelation of vectors of Real values." alt="" coords="80,96,187,123">
+<area shape="rect" href="$classIFFT.html" title="Algorithm to perform an Inverse Fast Fourier Transform of a vector of Complex values..." alt="" coords="73,6,121,32">
+<area shape="rect" href="$classFFT.html" title="Algorithm to perform a Fast Fourier Transform of a vector of Real values." alt="" coords="145,6,191,32">

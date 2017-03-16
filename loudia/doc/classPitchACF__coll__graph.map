@@ -1,0 +1,5 @@
+<area shape="rect" href="$classPeakInterpolation.html" title="Algorithm to interpolate peaks in a vector of Real values." alt="" coords="5,96,128,123">
+<area shape="rect" href="$classPeakDetection.html" title="Algorithm to find peaks in a vector of Real values." alt="" coords="152,96,259,123">
+<area shape="rect" href="$classAutocorrelation.html" title="Algorithm to perform an autocorrelation of vectors of Real values." alt="" coords="283,96,389,123">
+<area shape="rect" href="$classIFFT.html" title="Algorithm to perform an Inverse Fast Fourier Transform of a vector of Complex values..." alt="" coords="276,6,324,32">
+<area shape="rect" href="$classFFT.html" title="Algorithm to perform a Fast Fourier Transform of a vector of Real values." alt="" coords="348,6,393,32">
