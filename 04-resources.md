@@ -1,24 +1,31 @@
 ---
 layout: page
-title: Software
-permalink: /software/
+title: Resources
+permalink: /resources/
 ---
 
-### Loudia
+### Data
+#### Consistent confusions
+   [<img style="max-width: 200px; filter: invert(100%); float: right; margin: 1em; overflow: auto;" src="{{ site.baseurl }}/assets/consistent_confusion.png">](http://spandh.dcs.shef.ac.uk/ECCC/)
+
+[The English Consistent Confusion Corpus](http://spandh.dcs.shef.ac.uk/ECCC/) is a large-scale collection of noise induced British English speech misperceptions. These misperceptions have been elicited by asking listeners to transcribe English words mixed with complex noise backgrounds.
+
+### Software
+#### Loudia
 [<img style="max-width: 200px; float: right; margin: 1em; overflow: auto;" src="{{ site.baseurl }}/assets/loudia.png">](http://www.ricardmarxer.com/loudia)
 
 Loudia is a Free Software audio processing library written in C++. It implements a variety of common processing blocks such as Windowing, FFT/IFFT, FIR/IIR Filters, onset detectors, pitch estimation, MFCC, LPC, NMF.
 
  - [Loudia](http://www.ricardmarxer.com/loudia) (GNU/GPL v3 or later)
 
-### Geomerative
+#### Geomerative
    [<img style="max-width: 200px; float: right; margin: 1em; overflow: auto;" src="{{ site.baseurl }}/assets/geomerative.jpg">](http://www.ricardmarxer.com/geomerative)
 
 Geomerative is a library for Processing. It extends 2D geometry operations to facilitate generative geometry. Includes a TrueType font and an SVG interpreters. This library exposes the shapes (such as vector drawings or typographies) in a more approchable way. Geomerative simplifies access to the paths, the handles and the points, making it easy to develop generative typography and geometry pieces in Processing.
 
  - [Geomerative](http://www.ricardmarxer.com/geomerative) for Processing (Java)
 
-### Fisica
+#### Fisica
 
    <img style="clip: rect(0,100px,auto,auto); max-width: 200px; float: right; margin: 1em; overflow: auto;" src="{{ site.baseurl }}/assets/fisica.png">
 
