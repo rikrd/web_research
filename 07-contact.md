@@ -5,11 +5,11 @@ permalink: /contact/
 ---
 
 Ricard Marxer <br/>
-Department of Computer Science, University of Sheffield <br/>
-Regent Court 211 Portobello <br/>
-S1 4DP <br/>
-Sheffield <br/>
-UNITED KINGDOM <br/>
+LSIS, Univ. de Toulon, Bât. X <br/>
+Campus de La Garde <br/>
+CS 60584 <br/>
+83041 Toulon CEDEX 9 <br/>
+FRANCE <br/>
 
 
 
