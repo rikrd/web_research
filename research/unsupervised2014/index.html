@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Unsupervised Incremental Learning and Prediction of Audio Signals: Supplementary Material </title>
+</head>
+
+<body>
+
+  <h1>Unsupervised Incremental Learning and Prediction of Audio Signals: Supplementary Material </h1>
+  <p><a href="http://www.ricardmarxer.com/research">Ricard Marxer</a><sup><a href="#fn1" id="ref1">1</a></sup><sup><a href="#fn2" id="ref2">2</a></sup>, <a href="http://personprofil.aau.dk/130346">Hendrik Purwins</a><sup><a href="#fn1" id="ref3">1</a></sup><sup><a href="#fn3" id="ref4">3</a></sup></p>
+  <p><sup id="fn1">1. <a href="http://www.mtg.upf.edu/">Music Technology Group</a></sup>, Universitat Pompeu Fabra, Roc Boronat, 138, 08018 Barcelona, Spain
+  <!--<a href="#ref1" title="Jump back to footnote 1 in the text.">↩</a></sup>-->
+  </p>
+  <p><sup id="fn2">2. <a href="http://spandh.dcs.shef.ac.uk/">Speech and Hearing Research Group</a></sup>, University of Sheffield, Regent Court, 211 Portobello Street, Sheffield,
+S1 4DP, UK<!--<a href="#ref2" title="Jump back to footnote 2 in the text.">↩</a></sup>--></p>
+  <p><sup id="fn3">3. <a href="http://www.create.aau.dk/audio/">Audio Analysis Lab</a></sup>, Aalborg Universitet  Kobenhavn, A.C. Meyers Vaenge 15, 2450 Copenhagen SV, Denmark<!--<a href="#ref3" title="Jump back to footnote 3 in the text.">↩</a></sup>--></p>
+
+  <h2>Abstract</h2>
+  <p>Artful play with listeners' expectations is one of the supreme skills
+of a gifted musician. We present a system that analyzes an audio signal in an unsupervised manner in
+order to generate a musical representation of it on the fly. The system
+performs the task of next note prediction using the emerged representation.
+The main difference between our system and other existing music prediction
+systems is the fact that it dynamically creates the necessary representations
+as needed. Therefore it can adapt itself to any type of sounds, with as many
+timbre  classes as there may be. The system consists of a clustering
+algorithm coupled with an algorithm for sequence learning that adapts its structure to the
+dynamically changing clustering tree.
+The flow of the system is as follows:
+1) segmentation by onset detection, 2) timbre representation of
+each segment by  Mel frequency cepstrum coefficients,
+3) discretization by incremental clustering, yielding a tree of different sound classes (e.g.
+instruments) that can grow or shrink on the fly driven by the instantaneous sound events, resulting in a
+discrete symbol sequence,
+4) extraction of statistical regularities of the symbol sequence, using hierarchical N-grams and
+the newly introduced conceptual Boltzmann machine,
+and 5) prediction of then next sound event in the sequence.
+The system is  tested on drum loops and voice recordings. We assess the
+robustness of the performance with respect to complexity and noisiness of the
+signal. Given that the number of estimated timbre clusters is not necessarily
+the same as the number of different ground truth timbre classes, we evaluate the performance  of the system with the adjusted Rand index (ARI). 
+We evaluate separately the different steps in the process and finally the
+system as a whole as well as the interacting components of the complete
+system.
+Clustering in isolation yields an ARI of   82.7% /85.7% for data sets of singing voice and drums.
+Onset detection jointly with clustering achieve an ARI of 81.3% /76.3% (voice/drums).
+The prediction of the entire system yields an ARI of 27.2%/39.2% (voice/drums).</p>
+
+  <h2>Audio-Visual Material</h2>
+  <h3>Videos</h3>
+  
+  <iframe width="420" height="315" src="http://www.youtube.com/embed/W4ciEG4aYAI" frameborder="0" allowfullscreen></iframe>
+   <p>New clusters (orange circles, yellow diamonds) emerge on the fly. A scatter plot of the projection of the MFCC vectors (timbre representation) onto their first two principal components (above) and the incremental clustering tree (below left), and a tree-map representation of the number of instances per cluster (below, right) are shown. (Fig. 10)</p> 
+  <iframe width="420" height="315" src="http://www.youtube.com/embed/-Q3Uw3BgWaQ" frameborder="0" allowfullscreen></iframe>
+  <p>Two clusters (circles, squares) merge into one cluster (squares). A scatter plot of the projection of the MFCC vectors (timbre representation) onto their first two principal components (above) and the incremental clustering tree (below left), and a tree-map representation of the number of instances per cluster (below, right) are shown. (Fig. 9)</p>
+
+  <h3>Audio</h3>
+  <h4>Voice data</h4>
+  <p>Informal low quality and short voice recordings of very simplified beat boxing, used to evaluate the system in Section 3.3. (Testing of Processing Stages with Audio Recordings). </p> 
+   <audio controls><source src="audios/hendrik_voice/bomtschibomtschitschi.wav"></audio>
+   <p> Example from Fig. 8 </p>
+  <audio controls><source src="audios/hendrik_voice/bongtabongtata.wav"></audio> 
+  <audio controls><source src="audios/hendrik_voice/bumtatschi.wav"></audio>
+  <p> Example from Fig. 7 </p>
+  <audio controls><source src="audios/hendrik_voice/tatototatotatoto.wav"></audio>
+  <audio controls><source src="audios/hendrik_voice/tsetongtongtong.wav"></audio>
+
+  <h4>ENST data</h4>
+  <p>We used a subset from the <a href="http://www.tsi.telecom-paristech.fr/aao/en/2010/02/19/enst-drums-an-extensive-audio-visual-database-for-drum-signals-processing/">ENST-Drums data base</a>. In our simulations, we employed the audio files in 44.1 kHz/stereo. However, here we can only make the files accessible downsampled to 8kHz/mono. For obtaining the original audio data, please confer their
+  <a href="http://www.tsi.telecom-paristech.fr/aao/en/2010/02/19/enst-drums-an-extensive-audio-visual-database-for-drum-signals-processing/"> website</a>.</p>
+  <audio controls><source src="audios/enst_drums/038_phrase_disco_simple_slow_sticks_ds.wav"></audio>
+  <audio controls><source src="audios/enst_drums/042_phrase_disco_complex_medium_sticks_ds.wav"></audio>
+  <audio controls><source src="audios/enst_drums/046_phrase_rock_simple_fast_sticks_ds.wav"></audio>
+  <audio controls><source src="audios/enst_drums/099_phrase_country_simple_slow_brushes_ds.wav"></audio>
+  <audio controls><source src="audios/enst_drums/104_phrase_country_complex_medium_brushes_ds.wav"></audio>
+
+  <h4>Examples</h4>
+  <audio controls><source src="audios/merged.wav"></audio>
+  <p>Example of how two clusters merge into one cluster in Section 3.4. (Examples, Fig. 9, audio used in video above) </p>
+  <audio controls><source src="audios/split.wav"></audio>
+  <p>Example of how new clusters are generated in Section 3.4. (Examples, Fig. 10, audio used in video above).</p>
+
+</body>
+
+</html>
