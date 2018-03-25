@@ -2,7 +2,7 @@
 layout: page
 ---
 
-I'm currently a Research Associate at the [Speech and Hearing Research Group (SpandH)](http://spandh.dcs.shef.ac.uk/) in the Department of Computer Science, [University of Sheffield](http://spandh.dcs.shef.ac.uk/).
+I'm currently a Maître de conférences (Asst. Prof.) at the [Université de Toulon](http://www.univ-tln.fr/).
 
 My research interests:
  - Speech perception and processing
