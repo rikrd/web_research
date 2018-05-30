@@ -35,6 +35,10 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - README.md
+  - fisica
+  - geomerative
+  - loudia
 
 scholar:
   #  style: ieee
