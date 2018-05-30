@@ -5,6 +5,11 @@ permalink: /resources/
 ---
 
 ### Data
+#### Audio-visual Lombard speech
+   [<img style="max-width: 200px; float: right; margin: 1em; overflow: auto;" src="{{ site.baseurl }}/assets/avlombardgrid.png">](http://spandh.dcs.shef.ac.uk/avlombard/)
+
+[The audio-visual Lombard Grid speech corpus](http://spandh.dcs.shef.ac.uk/avlombard/) is a bi-view audiovisual Lombard speech corpus which can be used to support joint computational-behavioral studies in speech perception. The corpus includes 54 talkers, with 100 utterances per talker (50 Lombard and 50 plain utterances). This dataset follows the same sentence format as the audiovisual Grid corpus, and can thus be considered as an extension of that corpus. The sentence sets used in the Lombard Grid corpus are unique, however, and have not been utilized by the Grid corpus.
+
 #### Consistent confusions
    [<img style="max-width: 200px; filter: invert(100%); float: right; margin: 1em; overflow: auto;" src="{{ site.baseurl }}/assets/consistent_confusion.png">](http://spandh.dcs.shef.ac.uk/ECCC/)
 
