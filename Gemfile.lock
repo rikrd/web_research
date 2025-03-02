@@ -361,7 +361,7 @@ DEPENDENCIES
   google-protobuf
   jekyll
   jekyll-feed
-  jekyll-scholar
+  jekyll-scholar (~> 5.16.0)
   kramdown
   liquid
   minima

@@ -1,4 +1,5 @@
 source "https://rubygems.org"
+
 ruby RUBY_VERSION
 
 # Hello! This is where you manage which Jekyll version is used to run.
@@ -14,28 +15,22 @@ gem 'jekyll'
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 gem "minima"
 
-# If you want to use GitHub Pages, remove the "gem "jekyll"" above and
-# uncomment the line below. To upgrade, run `bundle update github-pages`.
-# gem "github-pages", group: :jekyll_plugins
-
-# If you have any plugins, put them here!
-group :jekyll_plugins do
-   gem "jekyll-feed"
-   gem 'jekyll-scholar'
-end
-
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'rexml'
-
-gem 'ffi'
-
-gem "google-protobuf"
-
-source "https://rubygems.org"
-
+# Uncomment below for GitHub Pages support (if needed)
 gem 'github-pages', '~> 232', group: :jekyll_plugins
 
+# Jekyll plugins
+group :jekyll_plugins do
+   gem "jekyll-feed"
+   gem 'jekyll-scholar', '~> 5.16.0'  # Specify version if necessary
+end
+
+# Windows support for tzinfo
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# Other dependencies
+gem 'rexml'
+gem 'ffi'
+gem "google-protobuf"
 gem 'liquid'
 gem 'kramdown'
 
