@@ -15,13 +15,11 @@ gem 'jekyll'
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 gem "minima"
 
-# Uncomment below for GitHub Pages support (if needed)
-gem 'github-pages', '~> 232', group: :jekyll_plugins
-
 # Jekyll plugins
 group :jekyll_plugins do
    gem "jekyll-feed"
-   gem 'jekyll-scholar', '~> 5.16.0'  # Specify version if necessary
+   gem 'jekyll-scholar', '~> 7.1.3'  # Specify version if necessary
+   gem 'github-pages-health-check'
 end
 
 # Windows support for tzinfo

@@ -5,6 +5,4 @@ permalink: /publications/
 ---
 
 
-{% comment %}
 {% bibliography %}
-{% endcomment %}
