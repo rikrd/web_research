@@ -2,7 +2,7 @@
 layout: page
 ---
 
-I'm currently a Maître de conférences (Asst. Prof.) at the [Université de Toulon](http://www.univ-tln.fr/) and a researcher at [LIS UMR CNRS 7020](http://www.lis-lab.fr/) 
+I'm currently a Professeur des Universités (*Full Professor*) at the [Université de Toulon](http://www.univ-tln.fr/) and a researcher at [LIS UMR CNRS 7020](http://www.lis-lab.fr/) 
 
 My research interests:
  - Speech perception and processing
