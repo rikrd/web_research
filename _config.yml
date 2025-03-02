@@ -23,6 +23,10 @@ twitter_username: ricardmp
 github_username:  rikrd
 google_analytics: UA-312817-2
 
+plugins:
+  - jekyll-scholar
+  - jekyll-feed
+
 # Build settings
 markdown: kramdown
 kramdown:
@@ -30,8 +34,10 @@ kramdown:
   hard_wrap: false
 highlighter: rouge
 theme: minima
-gems:
+plugins:
+  - jekyll-scholar
   - jekyll-feed
+
 exclude:
   - Gemfile
   - Gemfile.lock
