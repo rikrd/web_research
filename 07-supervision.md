@@ -6,15 +6,39 @@ permalink: /supervision/
 
 ## Supervision
 
-### PhD Theses
-- **S. Baroudi** (2023–present) – *Joint speech diarization and separation*. AI for joint speech separation and diarization.
-- **A. Balleroy** (2023–present) – *Large-scale exploratory modeling of early language acquisition*. AI for speech and cognition.
-- **S. Cuervo** (2022–present) – *Deep learning for speech perception*. AI for speech and language perception.
-- **J. Cauzinilles** (2022–present) – *Self-supervised representation learning of primate vocalizations, from analysis to synthesis*. AI for bioacoustics and speech.
-- **C. Boittiaux** (2020–2023) – *Visual localisation for long-term monitoring of the deep sea*. Underwater computer vision.
-- **P. Best** (2019–2022) – *Intelligent bioacoustics for real-time prediction, detection and underwater surveillance of wildlife and risk management with maritime traffic*. AI for underwater multichannel bioacoustic data.
-- **G. Sanchez** (2018–2022) – *Video characterisation algorithms for automatic indexing of audiovisual content*. Audio-visual scene analysis and self-supervised learning.
-- **M. Ferrari** (2017–2020) – *Bio-inspired sonar based on a complete transmission-propagation-reception chain*. Multichannel and multimodal underwater bioacoustics.
+### PhD Theses Supervision
+
+- **S. Cuervo** – *Deep learning for speech perception* (2022–present)  
+  100% supervision  
+  AI for speech and language perception
+
+- **S. Baroudi** – *Joint speech diarization and separation* (2023–present)  
+  40% supervision  
+  AI for joint speech separation and diarization
+
+- **A. Balleroy** – *Large-scale exploratory modeling of early language acquisition* (2023–present)  
+  33% supervision  
+  AI for speech and cognition
+
+- **J. Cauzinille** – *Self-supervised representation learning of primate vocalizations, from analysis to synthesis* (2022–present)  
+  33% supervision  
+  AI for bioacoustics and speech
+
+- **C. Boittiaux** – *Visual localisation for long-term monitoring of the deep sea* (2020–2023)  
+  25% supervision  
+  Underwater computer vision
+
+- **P. Best** – *Intelligent bioacoustics for real-time prediction, detection and underwater surveillance of wildlife and manage the risk of collision with maritime traffic* (2019–2022)  
+  33% supervision  
+  AI for underwater multichannel bioacoustic data
+
+- **G. Sanchez** – *Study and development of video characterisation algorithms. Application to the automatic indexing of audiovisual content.* (2018–2022)  
+  33% supervision  
+  Audio-visual scene analysis and self-supervised learning
+
+- **M. Ferrari** – *Study of bio-inspired sonar based on the modelling of a complete transmission-propagation-reception chain. Validation on sperm whales* (2017–2020)  
+  33% supervision  
+  Multichannel and multimodal underwater bioacoustics
 
 ### Master Theses
 - **B. Aydin** (2025, 33%) – *Zero-Shot and Few-Shot Classification using Marine Mammals Sound*. Bioacoustics.

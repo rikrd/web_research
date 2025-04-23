@@ -28,6 +28,40 @@ permalink: /academia/
 - **Active conference reviewer for**:  
   ECAI, ASRU, SIGDIAL, INTERSPEECH, SLT, ICASSP, ICRA  
 
+### PhD Juries
+
+- **Mar 2025** – *Rapporteur*, Sorbonne Université / Muséum national d'Histoire naturelle, Paris  
+  *Data-centric artificial intelligence for ecoacoustics*  
+  Doctoral defense by Felix Michaud
+
+- **Jan 2024** – *Rapporteur*, IMT Atlantique, Brest  
+  *Multimodal AI Methods in Oceanographic Observation Contexts and Heterogeneous Multi-Sensor Maritime Surveillance*  
+  Doctoral defense by Matteo Zambra
+
+- **Dec 2023** – *Member of the Jury*, Aix-Marseille University, Marseille  
+  *From Vocal Signal to Neural Response: Computational Modeling and Evolutionary Perspectives on Voice Processing in the Auditory Cortex*  
+  Doctoral defense by Charly Lamothe
+
+- **Oct 2023** – *Rapporteur*, University of Le Mans  
+  *Interactions Between Speakers: From Overlapping Speech Detection to Interruptions Detection*  
+  Doctoral defense by Martin Lebourdais
+
+- **Dec 2021** – *Member of the Jury*, Universidad Jaume I  
+  *Towards a predictive interface for the specification of intervention tasks in underwater robotics*  
+  Doctoral defense by Juan Carlos García Sánchez
+
+- **Sep 2019** – *Member of the Jury*, Paris-Saclay University  
+  *Steps Towards End-to-End Neural Speaker Diarization*  
+  Doctoral defense by Ruiqing Yin
+
+- **Sep 2017** – *External referee*, University of Granada  
+  *Robust Speech Recognition on Intelligent Mobile Devices with Dual-Microphone*  
+  Doctoral defense by Iván López Espejo
+
+- **Sep 2017** – *Member of the Jury*, University of Granada  
+  *Estimation and Reconstruction Techniques for Robust Speech Transmissions*  
+  Doctoral defense by Domingo López Oller
+
 ## Prizes, Distinctions and Invitations
 - **Jan 2025**: Invited scholar for a SPARC-III project — *"Networked Marine Robotic Systems for Ocean Exploration"*, Calicut and Goa, India  
   *Talk: AI for underwater machine perception: listening to whales & seeing in the deep*
