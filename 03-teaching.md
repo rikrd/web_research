@@ -4,58 +4,19 @@ title: Teaching
 permalink: /teaching/
 ---
 
-## Current courses
+## Courses
 
-### Audio Processing
-  - 2017 - present
-  - CNAM STMN Engineering
-  - 36h : lectures, seminars & labs
-  - Université de Toulon
+- **2021–present**: *Deep Learning / Reinforcement Learning / Data-driven Machine Perception* (300h)  
+  Université de Toulon — Erasmus Mundus Joint Master's Degree in Marine and Maritime Intelligent Robotics (MIR)
 
-### Pluridisciplinary Projects
-  - 2017 - present
-  - CNAM STMN Engineering
-  - 56h : lectures, seminars & labs
-  - Université de Toulon
+- **2017–2021**: *Audio Processing / Machine Learning / Deep Learning / Reinforcement Learning* (600h)  
+  Université de Toulon — CNAM Digital Media Engineering, Math & CS, MSc DID, MSc ISC, SeaTech Engineering
 
-## Past courses
+- **2010–2014**: *Mathematics for Design* (240h)  
+  Elisava, Escola Superior de Disseny i Enginyeria de Barcelona — Degree in Design
 
-### Data fusion
-  - 2017 - 2018
-  - MSc DPAM
-  - 18h : lectures, seminars & labs
-  - Université de Toulon
+- **2007–2014**: *Advanced Programming (Processing & Java)* (100h)  
+  Universitat Pompeu Fabra, Barcelona — Digital Arts MA and Postgraduate Studies in Digital Arts / Web 2.0
 
-### Algorithms
-  - 2017 - 2018
-  - L1 Math & CS
-  - 18h : seminars & labs
-  - Université de Toulon
-
-### Mathematics for design
-  - 2010 - 2014
-  - Bachelor’s Degree in Design
-  - 247h : seminars & labs
-  - Elisava School
-
-### Advanced programming for artists
-  - 2007 - 2014
-  - Master in Digital Arts
-  - 104h : seminars
-  - Universitat Pompeu Fabra
-
-### Sound and music processing
-  - 2009
-  - 3rd year Computer Science Engineering
-  - 8h : lectures & 12h : seminars
-  - Universitat Pompeu Fabra
-
-### Signals and systems I: audio
-  - 2006 - 2008
-  - 1st year Computer Science Engineering
-  - 108h : labs 
-  - Universitat Pompeu Fabra
-
-### Processing lectures 
-  - Interaction Design Postgraduate Course 
-  - Elisava School
+- **2006–2009**: *Signal Processing I: Computer Science for Audio & Music* (120h)  
+  Universitat Pompeu Fabra, Barcelona — Computer Science Engineering

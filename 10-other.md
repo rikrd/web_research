@@ -18,9 +18,9 @@ permalink: /other/
 
 ### Mechanical attractors
 
-   [<img style="max-width: 200px; float: right; margin: 1em; overflow: auto;" src="{{ site.baseurl }}/assets/mechanical_attractors.png">](http://www.ricardmarxer.com/mechanical_attractors)
+   <img style="max-width: 200px; float: right; margin: 1em; overflow: auto;" src="{{ site.baseurl }}/assets/mechanical_attractors.png">
 
-   [Mechanical attractors](http://www.ricardmarxer.com/mechanical_attractors) (2010) is a collection of virtual artifacts involving simple physical interactions that are concrete, predictable and easy to understand for everyone. The output of the experiments consists simply in drawing the paths of some of the objects in the scene.
+   Mechanical attractors (2010) is a collection of virtual artifacts involving simple physical interactions that are concrete, predictable and easy to understand for everyone. The output of the experiments consists simply in drawing the paths of some of the objects in the scene.
 
 ### Other projects and collaborations
  
@@ -33,9 +33,9 @@ permalink: /other/
 
    [<img style="max-width: 600px; margin: 1em; overflow: auto;" src="{{ site.baseurl }}/assets/vimeo.png">](https://vimeo.com/10779097)
    
-   [<img style="max-width: 200px; float: right; margin: 1em; overflow: auto;" src="{{ site.baseurl }}/assets/cascadeonwheels.jpg">](http://www.trsp.net/cow/)
+   <img style="max-width: 200px; float: right; margin: 1em; overflow: auto;" src="{{ site.baseurl }}/assets/cascadeonwheels.jpg">
  
-   Collaborated on [Cascade on Wheels](http://www.trsp.net/cow/), a traffic visualization project by [Steph Thirion](http://www.trsp.net/).
+   Collaborated on *Cascade on Wheels*, a traffic visualization project by *Steph Thirion*.
    
    
 ## Talks, interviews & features
