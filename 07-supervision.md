@@ -4,9 +4,7 @@ title: Supervision
 permalink: /supervision/
 ---
 
-## Supervision
-
-### PhD Theses
+## PhD Theses
 
 - **S. Cuervo** – *Deep learning for speech perception* (2022–present)  
   100% supervision  
@@ -40,7 +38,7 @@ permalink: /supervision/
   33% supervision  
   Multichannel and multimodal underwater bioacoustics
 
-### Research Assistants
+## Research Assistants
 - **C. Bernard** – *Bird vocalisation monitoring and recognition in the field* (2024–present)  
   AI for bioacoustics
 - **M. Antunes** – *An analysis-by-synthesis approach to the study of musical texture* (2024–present)  
@@ -49,7 +47,7 @@ permalink: /supervision/
   AI for bioacoustics
 
 
-### Master Theses
+## Master Theses
 - **B. Aydin** (2025, 33%) – *Zero-Shot and Few-Shot Classification using Marine Mammals Sound*. Bioacoustics.
 - **F. Amor** (2024, 33%) – *Data Driven modelling of Sea Ice Drift*. Ocean sensing and modelling.
 - **M. R. Rahman** (2024, 50%) – *Self-Supervised Scale Consistent Depth and Ego-motion Learning from Monocular Video for underwater robots*. Underwater computer vision.
@@ -62,7 +60,7 @@ permalink: /supervision/
 - **N. Thellier** (2020, 33%) – *Joint classification and localisation for underwater data*. Multichannel bioacoustics.
 - **C. Lamothe** (2019, 33%) – *Language constraints in unsupervised symbol discovery*. Unsupervised learning on speech data.
 
-### Short Master Internships (<2 months)
+## Short Master Internships (<2 months)
 - **A. Badawi** (2024) – *Deep learning for speech modeling*.
 - **E. Deowan** (2024) – *DRL and multi-modal sensor fusion for underwater navigation*.
 - **R. Rincón** (2023) – *Unsupervised depth estimation with deep learning*.

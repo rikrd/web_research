@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+<div class="home" style="display: flex; gap: 2rem; align-items: flex-start;">
+  <div style="flex: 3;">
+    {%- if page.title -%}
+      <h1 class="page-heading">{{ page.title }}</h1>
+    {%- endif -%}
+
+    {{ content }}
+
+  </div>
+
+  <aside style="flex: 1;">
+    {% include sidebar.html %}
+  </aside>
+</div>

@@ -4,8 +4,6 @@ title: Teaching
 permalink: /teaching/
 ---
 
-## Courses
-
 - **2021–present**: *Deep Learning / Reinforcement Learning / Data-driven Machine Perception* (300h)  
   Université de Toulon — Erasmus Mundus Joint Master's Degree in Marine and Maritime Intelligent Robotics (MIR)
 

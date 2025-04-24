@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: home_with_sidebar
 ---
 
 I'm currently a Professeur des Universités (*Full Professor*) at the [Université de Toulon](http://www.univ-tln.fr/) and a researcher at [LIS UMR CNRS 7020](http://www.lis-lab.fr/) 
@@ -16,3 +16,4 @@ My research interests:
  - Marine robotics
  - AI safety
  - Responsible AI
+

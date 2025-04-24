@@ -1,0 +1,15 @@
+<div class="sidebar">
+    <h3>Recent Posts</h3>
+    <ul>
+      {% for post in site.posts limit:5 %}
+        <li>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a><br>
+          <small>{{ post.date | date: "%b %-d, %Y" }}</small>
+        </li>
+      {% endfor %}
+    </ul>
+    <p style="margin-top:1em;">
+        <a href="/news/" class="see-all-news">… see all News</a>
+      </p>
+  </div>
+  
