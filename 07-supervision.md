@@ -6,7 +6,7 @@ permalink: /supervision/
 
 ## Supervision
 
-### PhD Theses Supervision
+### PhD Theses
 
 - **S. Cuervo** – *Deep learning for speech perception* (2022–present)  
   100% supervision  
