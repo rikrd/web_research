@@ -40,6 +40,15 @@ permalink: /supervision/
   33% supervision  
   Multichannel and multimodal underwater bioacoustics
 
+### Research Assistants
+- **C. Bernard** – *Bird vocalisation monitoring and recognition in the field* (2024–present)  
+  AI for bioacoustics
+- **M. Antunes** – *An analysis-by-synthesis approach to the study of musical texture* (2024–present)  
+  AI for music
+- **P. Best** – *Spatialised bioacoustics for the analysis of turn-taking in non-human interactions* (2022–present)  
+  AI for bioacoustics
+
+
 ### Master Theses
 - **B. Aydin** (2025, 33%) – *Zero-Shot and Few-Shot Classification using Marine Mammals Sound*. Bioacoustics.
 - **F. Amor** (2024, 33%) – *Data Driven modelling of Sea Ice Drift*. Ocean sensing and modelling.
