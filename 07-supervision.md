@@ -6,10 +6,6 @@ permalink: /supervision/
 
 ## PhD Theses
 
-- **S. Cuervo** – *Deep learning for speech perception* (2022–present)  
-  100% supervision  
-  AI for speech and language perception
-
 - **S. Baroudi** – *Joint speech diarization and separation* (2023–present)  
   40% supervision  
   AI for joint speech separation and diarization
@@ -17,6 +13,10 @@ permalink: /supervision/
 - **A. Balleroy** – *Large-scale exploratory modeling of early language acquisition* (2023–present)  
   33% supervision  
   AI for speech and cognition
+
+- **S. Cuervo** – *Deep learning for speech perception* (2022–present)  
+  100% supervision  
+  AI for speech and language perception
 
 - **J. Cauzinille** – *Self-supervised representation learning of primate vocalizations, from analysis to synthesis* (2022–present)  
   33% supervision  
