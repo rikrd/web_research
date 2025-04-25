@@ -6,6 +6,8 @@ permalink: /teaching/
 
 ## Responsibilities
 
+[<img style="max-width: 200px; float: right; margin: 1em; overflow: auto;" src="{{ site.baseurl }}/assets/logo_MIR_inverted.png">](https://www.master-mir.eu/)
+
 - **Creator and Director of the EMJMD in [Marine and maritime Intelligent Robotics (MIR)](http://www.master-mir.eu/), University of Toulon (2018–present)**
 Led the full lifecycle of this EU-funded international master's program—from concept and proposal to implementation. The program, coordinated by UTLN, offers prestigious scholarships to top students worldwide and requires multi-institutional mobility, joint/double degrees, and academic excellence.
 

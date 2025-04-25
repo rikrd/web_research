@@ -69,15 +69,15 @@ permalink: /academia/
 - **Oct 2024**: Leader of the **Play Your Part** team at the [Jelinek Memorial Summer Workshop on Speech and Language Technologies](https://jsalt2025.fit.vut.cz/) (to take place in Jun–Aug 2025), Brno, Czechia  
   *Theme: Natural Language Processing and AI safety*
 
-- **Sep 2024**: Winner of DISPLACE Challenge Tracks 1 & 2 — TALTECH–IRIT–LIS Team (Online)
+- **Sep 2024**: **Winner of DISPLACE Challenge** Tracks 1 & 2 — TALTECH–IRIT–LIS Team (Online)
 
-- **Jun 2024**: Best Student Paper Award at [Speaker Odyssey 2024](https://www.odyssey2024.org/outputs#h.xk3gax56oef6), Quebec, Canada  
+- **Jun 2024**: Best **Student Paper Award** at [Speaker Odyssey 2024](https://www.odyssey2024.org/outputs#h.xk3gax56oef6), Quebec, Canada  
   *Paper: "PixIT: Joint Training of Speaker Diarization and Speech Separation from Real-world Multi-speaker Recordings"*
 
 - **Nov 2023**: Invited lecturer at the *Marine Robotics School*, Goa, India  
   *Talk: AI for underwater machine perception: listening to whales & seeing in the deep*
 
-- **Sep 2023**: 1st place in [Clarity Prediction Challenge 2](https://claritychallenge.org/clarity2023-workshop/results.html), Dublin, Ireland  
+- **Sep 2023**: **1st place** in [Clarity Prediction Challenge 2](https://claritychallenge.org/clarity2023-workshop/results.html), Dublin, Ireland  
   *Hearing Industry Research Consortium best system prize — "Temporal-hierarchical features from noise-robust speech foundation models for non-intrusive intelligibility prediction"*
 
 - **Jul 2023**: Invited participant to workshop *Automatic Detection in Bioacoustics*, University of Cambridge, UK
@@ -85,19 +85,19 @@ permalink: /academia/
 - **Mar 2023**: Invited speaker at *MARBLE workshop on Automatic Detection in Bioacoustics*, Athens, Greece  
   *MARBLE – Joint Master on Maritime Robotics in Blue Economy*
 
-- **Sep 2022**: ISCA Award for Best Review Paper in *Computer Speech and Language* (2017–2021), Seoul, South Korea  
+- **Sep 2022**: **ISCA Award** for Best Review Paper in *Computer Speech and Language* (2017–2021), Seoul, South Korea  
   *Paper: “The third ‘CHiME’ speech separation and recognition challenge: Analysis and outcomes” — Jon Barker, Ricard Marxer, Emmanuel Vincent, Shinji Watanabe*
 
-- **Aug 2022**: Invited speaker at workshop *Full-stack Bioacoustics: Field Kit to AI Action*, Lorentz Center, Leiden, Netherlands  
+- **Aug 2022**: **Invited speaker** at workshop *Full-stack Bioacoustics: Field Kit to AI Action*, Lorentz Center, Leiden, Netherlands  
   *Talk: Study of speech (and other signals) in adverse conditions*
 
 - **May 2022**: Invited speaker at *ixTalk*, ixBlue, La Ciotat, France  
   *Talk: Machine learning with few labels*
 
-- **Sep 2021**: ISCA Award for Best Review Paper in *Computer Speech and Language* (2016–2020), Brno, Czech Republic  
+- **Sep 2021**: **ISCA Award** for Best Review Paper in *Computer Speech and Language* (2016–2020), Brno, Czech Republic  
   *Paper: “An analysis of environment, microphone and data simulation mismatches in robust speech recognition” — Emmanuel Vincent, Shinji Watanabe, Aditya Arie Nugraha, Jon Barker, Ricard Marxer*
 
-- **Jan 2020**: Invited speaker at *Speech-in-Noise (SPIN) Workshop*, Toulouse, France  
+- **Jan 2020**: **Invited speaker** at *Speech-in-Noise (SPIN) Workshop*, Toulouse, France  
   *Talk: Towards microscopic intelligibility modelling*
 
 - **Jan 2019**: Invited abstract at *International Conference of Acoustics (ICA)*
