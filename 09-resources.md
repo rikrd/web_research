@@ -5,6 +5,18 @@ permalink: /resources/
 ---
 
 ### Data
+#### Eiffel Tower: A Deep-Sea Underwater Dataset for Long-Term Visual Localization
+   [<img style="max-width: 200px; float: right; margin: 1em; overflow: auto;" src="{{ site.baseurl }}/assets/eiffel_tower_topology.jpg">](https://sextant.ifremer.fr/record/seanoe:92226/)
+
+[Eiffel Tower](https://sextant.ifremer.fr/record/seanoe:92226/) is a new deep-sea dataset to benchmark underwater long-term visual localization. The dataset is composed of images from four visits to the same hydrothermal vent edifice over the course of five years. Camera poses and a common geometry of the scene were estimated using navigation data and Structure-from-Motion. This serves as a reference when evaluating visual localization techniques. An analysis of the data provides insights about the major changes observed throughout the years. We have evaluated several well-established visual localization methods on the dataset, showing there is still room for improvement in underwater long-term visual localization.
+
+
+#### ScribbleLens: Dutch Historical Handwritten Documents
+   [<img style="max-width: 200px; float: right; margin: 1em; overflow: auto;" src="{{ site.baseurl }}/assets/scribblelens.jpg">](https://openslr.org/84/)
+
+[ScribbleLens](https://openslr.org/84/) is a new handwritten corpus based on 400-year-old, cursive, early modern Dutch documents such as ship journals and daily logbooks. The 1000 page collection has been segmented into lines and we provide textual transcriptions on 20% of the pages. Other annotations such as handwriting slant, year of origin, complexity, and writer identity have been manually added. With over 80 writers this corpus is significantly larger and more varied than other existing data sets such as Spanish RODRIGO. We provide train/test splits, experimental results from an automatic transcription baseline and tools to facilitate its use in deep learning research. The manuscripts span over 150 years of significant journeys by captains and traders from the Vereenigde Oost-indische Company (VOC) such as Tasman, Brouwer and Van Neck, making this resource also valuable to historians and the paleography community.
+
+
 #### Audio-visual Lombard speech
    [<img style="max-width: 200px; float: right; margin: 1em; overflow: auto;" src="{{ site.baseurl }}/assets/avlombardgrid.png">](http://spandh.dcs.shef.ac.uk/avlombard/)
 

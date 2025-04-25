@@ -28,7 +28,7 @@ permalink: /academia/
 - **Active conference reviewer for**:  
   ECAI, ASRU, SIGDIAL, INTERSPEECH, SLT, ICASSP, ICRA  
 
-### PhD Juries
+## PhD Juries
 
 - **Mar 2025** – *Rapporteur*, Sorbonne Université / Muséum national d'Histoire naturelle, Paris  
   *Data-centric artificial intelligence for ecoacoustics*  
