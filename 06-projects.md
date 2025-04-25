@@ -5,10 +5,10 @@ permalink: /projects/
 ---
 
 ## Ongoing
- - [Master MIR](https://www.master-mir.eu/) Erasmus Mundus Joint Master's Degree in Marine and maritime Intelligent Robotics
- - [TABMON](https://www.nina.no/english/TABMON) Towards a Transnational Acoustic Biodiversity Monitoring Network
+ - [**Master MIR**](https://www.master-mir.eu/) Erasmus Mundus Joint Master's Degree in Marine and maritime Intelligent Robotics
+ - [**TABMON**](https://www.nina.no/english/TABMON) Towards a Transnational Acoustic Biodiversity Monitoring Network
  - **SeRiouSLy** Segmentation, clustering and separation of speakers
- - [ANR JCJC MIM](https://mim.lis-lab.fr/) Microscopic Intelligibility Modelling
+ - [**ANR JCJC MIM**](https://mim.lis-lab.fr/) Microscopic Intelligibility Modelling
 
 
 ## Past
