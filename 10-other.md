@@ -5,9 +5,9 @@ permalink: /other/
 ---
 
 ### Caligraft
-   [<img style="max-width: 200px; float: right; margin: 1em; overflow: auto;" src="{{ site.baseurl }}/assets/caligraft.jpg">](http://www.caligraft.com)
+   [<img style="max-width: 200px; float: right; margin: 1em; overflow: auto;" src="{{ site.baseurl }}/assets/caligraft.jpg">](https://web.archive.org/web/20161207052849/http://www.caligraft.com/)
 
-  [Caligraft](http://www.caligraft.com) (2006) is a generative art work which consists of a series of interactive pieces exploring the limits of representation in typographies and texts.
+  [Caligraft](https://web.archive.org/web/20161207052849/http://www.caligraft.com/) (2006) is a generative art work which consists of a series of interactive pieces exploring the limits of representation in typographies and texts.
 
   This project has been featured and presented at:
    - [OFFF'06](https://web.archive.org/web/20060907232958/http://www.offf.ws/bcn/html/programa.php?artista_id=375&lang=es)
