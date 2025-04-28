@@ -42,9 +42,11 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
-  - fisica
-  - geomerative
   - loudia
+
+include:
+  - geomerative
+  - fisica
 
 scholar:
   #  style: ieee
