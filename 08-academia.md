@@ -6,6 +6,10 @@ permalink: /academia/
 
 
 ## Scientific animation
+
+[<img style="max-width: 200px; float: right; margin: 1em; overflow: auto;" src="{{ site.baseurl }}/assets/vihar-logo.png">](http://vihar.lis-lab.fr)
+
+- Member of [VIHAR](http://vihar.lis-lab.fr)'s steering committee - Vocal Interactivity in-and-between Humans, Animals and Robots (2020-present)
 - Co-organiser of seminars and study days including *Analyse et synthèse des textures musicales dans le contexte de l'IA* (2025)  
 - Co-organiser of the [EUSIPCO 2024 special session](https://cmsworkshops.com/EUSIPCO2024/view_session.php?SessionID=1059)  
 - Guest editor of [special issue on Vocal Interactivity in *Interaction Studies* (2023)](https://benjamins.com/catalog/is.24.1?srsltid=AfmBOoprPigXci_SGzUaRAYfAvQCt3nPi1_XTfjPpqZMMubhMuFQXqq9) 
@@ -85,7 +89,7 @@ permalink: /academia/
 - **Mar 2023**: Invited speaker at *MARBLE workshop on Automatic Detection in Bioacoustics*, Athens, Greece  
   *MARBLE – Joint Master on Maritime Robotics in Blue Economy*
 
-- **Sep 2022**: **ISCA Award** for Best Review Paper in *Computer Speech and Language* (2017–2021), Seoul, South Korea  
+- **Sep 2022**: [**ISCA Award**](https://isca-speech.org/ISCA-Awards#:~:text=ISCA%20Award%20for%20the%20Best%20Review%C2%A0Paper%20published%20in%20Computer%20Speech%20and%20Language%20(2017%2D2021)%3A) for Best Review Paper in *Computer Speech and Language* (2017–2021), Seoul, South Korea  
   *Paper: “The third ‘CHiME’ speech separation and recognition challenge: Analysis and outcomes” — Jon Barker, Ricard Marxer, Emmanuel Vincent, Shinji Watanabe*
 
 - **Aug 2022**: **Invited speaker** at workshop *Full-stack Bioacoustics: Field Kit to AI Action*, Lorentz Center, Leiden, Netherlands  
@@ -94,7 +98,7 @@ permalink: /academia/
 - **May 2022**: Invited speaker at *ixTalk*, ixBlue, La Ciotat, France  
   *Talk: Machine learning with few labels*
 
-- **Sep 2021**: **ISCA Award** for Best Review Paper in *Computer Speech and Language* (2016–2020), Brno, Czech Republic  
+- **Sep 2021**: [**ISCA Award**](https://isca-speech.org/ISCA-Awards#:~:text=ISCA%20Award%20for%20the%20Best%20Review%C2%A0Paper%20published%20in%20Computer%20Speech%20and%20Language%20(2016%2D2020)%3A) for Best Review Paper in *Computer Speech and Language* (2016–2020), Brno, Czech Republic  
   *Paper: “An analysis of environment, microphone and data simulation mismatches in robust speech recognition” — Emmanuel Vincent, Shinji Watanabe, Aditya Arie Nugraha, Jon Barker, Ricard Marxer*
 
 - **Jan 2020**: **Invited speaker** at *Speech-in-Noise (SPIN) Workshop*, Toulouse, France  
