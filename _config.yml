@@ -21,7 +21,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: ricardmp
 github_username:  rikrd
-google_analytics: UA-312817-2
+google_analytics: G-BBYKRS74W3
 
 plugins:
   - jekyll-scholar
@@ -34,9 +34,6 @@ kramdown:
   hard_wrap: false
 highlighter: rouge
 theme: minima
-plugins:
-  - jekyll-scholar
-  - jekyll-feed
 
 exclude:
   - Gemfile

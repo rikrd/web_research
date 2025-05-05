@@ -14,8 +14,8 @@
   
   <link rel="stylesheet" href="{{ '/assets/css/override.css' | relative_url }}">
 
-  {% if jekyll.environment == 'production' and site.google_analytics %}
-  {% include google-analytics.html %}
+  {% if jekyll.environment == "production" %}
+    {% include consent.html %}
   {% endif %}
-  {% include cookieconsent.html %}
+
 </head>

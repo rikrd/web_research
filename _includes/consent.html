@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+
+<script>
+window.addEventListener('load', function(){
+  window.cookieconsent.initialise({
+    palette: {
+      popup: { background: "#000" },
+      button: { background: "#f1d600", text: "#000" }
+    },
+    theme: "classic",
+    type: "opt-in", // Enables Accept/Reject buttons
+    content: {
+      message: "We use cookies to analyze traffic and enhance your experience.",
+      dismiss: "Accept",
+      deny: "Reject",
+      link: "Learn more",
+      href: "/privacy-policy"
+    },
+    onInitialise: function(status) {
+      if (this.hasConsented()) {
+        loadAnalytics();
+      }
+    },
+    onStatusChange: function(status) {
+      if (this.hasConsented()) {
+        loadAnalytics();
+      }
+    }
+  });
+
+  function loadAnalytics() {
+    var gtagScript = document.createElement('script');
+    gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}';
+    gtagScript.async = true;
+    document.head.appendChild(gtagScript);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', '{{ site.google_analytics }}', {
+      anonymize_ip: true
+    });
+  }
+});
+</script>
