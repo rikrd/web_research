@@ -27,7 +27,7 @@ permalink: /supervision/
   Underwater computer vision
 
 - **P. Best** – *Intelligent bioacoustics for real-time prediction, detection and underwater surveillance of wildlife and manage the risk of collision with maritime traffic* (2019–2022)  
-  33% supervision  
+  20% supervision  
   AI for underwater multichannel bioacoustic data
 
 - **G. Sanchez** – *Study and development of video characterisation algorithms. Application to the automatic indexing of audiovisual content.* (2018–2022)  
@@ -35,7 +35,7 @@ permalink: /supervision/
   Audio-visual scene analysis and self-supervised learning
 
 - **M. Ferrari** – *Study of bio-inspired sonar based on the modelling of a complete transmission-propagation-reception chain. Validation on sperm whales* (2017–2020)  
-  33% supervision  
+  35% supervision  
   Multichannel and multimodal underwater bioacoustics
 
 ## Research Assistants
