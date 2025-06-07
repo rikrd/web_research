@@ -35,9 +35,9 @@ To close this gap, we introduce:
 
 ## 🧬 Key Findings
 
-- ✅ Neural networks can **generalise** to:
-  - Species not seen during training  
-  - **Unlabeled data**, via self-supervision
+- ✅ Deep learning-based methods can:
+  - **generalise** to species not seen during training  
+  - leverage **unlabeled data** via self-supervision
 
 - 🧠 **Self-supervised models** can perform nearly as well as supervised ones
 
