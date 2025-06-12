@@ -98,8 +98,6 @@ To close this gap, we introduce:
 
 ## 🌍 Broader Impact
 
-## 🌍 Broader Impact
-
 This study is the **first large-scale adaptation of Music Information Retrieval (MIR) tools** to the rich, complex world of **bioacoustic signals**.
 
 While no model is perfect, our work shows that **deep learning** offers a promising path toward **generic, scalable, and reliable F0 estimation in bioacoustics**.
