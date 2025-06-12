@@ -5,9 +5,14 @@ description: "Transferring MIR tools to animal vocalisation analysis"
 permalink: /f0-bioacoustics/
 ---
 
+# **Bioacoustic fundamental frequency estimation: a cross-species dataset and deep learning baseline**
+
+*Paul Best, Marcelo Araya-Salas, Axel G. Ekström, Bárbara Freitas, Frants H. Jensen, Arik Kershenbaum, Adriano R. Lameira, Kenna D. S. Lehmann, Pavel Linhart, Robert C. Liu, Malavika Madhavan, Andrew Markham, Marie A. Roch, Holly Root-Gutteridge, Martin Šálek, Grace Smith-Vidaurre, Ariana Strandburg-Peshkin, Megan R. Warren, Matthew Wijers, Ricard Marxer*
+
+✉️ **Contact authors**: Paul Best <paul.best@univ-amu.fr>, Ricard Marxer <ricard.marxer@lis-lab.fr>
+
 > 📄 **Full paper (Author Accepted Manuscript):**  
 > [Download PDF](/assets/f0-examples/Accepted_Manuscript_Best_Marxer_et_al_2025.pdf)
-
 
 ## 🧠 Overview
 
@@ -78,7 +83,20 @@ To close this gap, we introduce:
   [Dryad Repository – 250k Vocalisations, 14 Taxa](https://datadryad.org/dataset/doi:10.5061/dryad.prr4xgxw8)
 
 - 💻 **Code & Pretrained Models**:  
-  [GitHub – mim-team/bioacoustic_F0_estimation](https://github.com/mim-team/bioacoustic_F0_estimation)
+  [GitHub – mim-team/bioacoustic_F0_estimation](https://github.com/mim-team/bioacoustic_F0_estimation)  
+  Includes an **easy-to-use command-line script** for F0 estimation:
+
+  <pre><code>python predict.py my_sound_file.wav</code></pre>
+
+  In addition to **F0**, the tool also extracts several **spectral features**:
+
+  - 🎯 Sub-harmonic ratio  
+  - 🔊 Harmonicity  
+  - 📈 F0 salience  
+
+  These descriptors help assess **signal quality** and are useful for downstream analysis.
+
+## 🌍 Broader Impact
 
 ## 🌍 Broader Impact
 
@@ -86,8 +104,10 @@ This study is the **first large-scale adaptation of Music Information Retrieval 
 
 While no model is perfect, our work shows that **deep learning** offers a promising path toward **generic, scalable, and reliable F0 estimation in bioacoustics**.
 
+The estimated **F0 contours**, together with additional features like **harmonicity** and **F0 salience**, can support **interpretable vocalisation categorisation** — whether for **individual signatures**, **repertoire categories**, or other groupings. This provides a valuable **middle ground** between **manual expert annotation** and **black-box machine learning**, facilitating both **scientific insight** and **scalable analysis**.
+
 🔗 **Read the full article**:  
-["Benchmarking Neural F0 Estimation for Bioacoustics"](https://www.tandfonline.com/doi/full/10.1080/09524622.2025.2500380)  
+["Bioacoustic fundamental frequency estimation: a cross-species dataset and deep learning baseline"](https://www.tandfonline.com/doi/full/10.1080/09524622.2025.2500380)  
 Published in *Bioacoustics: The International Journal of Animal Sound and its Recording* (2025)
 
 ## 📚 How to Cite
