@@ -39,7 +39,7 @@ permalink: /academia/
   Doctoral defense by Felix Michaud
 
 - **Dec 2024** – *Rapporteur*, IMT Atlantique, Brest  
-  *Méthodes IA multimodales dans des contextes d’observation océanographique et de surveillance maritime multi-capteurs hétérogènes*  
+  *Invariant representation learning for few-shot bioacoustic event detection and classification*  
   Doctoral defense by Ilyass Moummad
 
 - **Jan 2024** – *Rapporteur*, IMT Atlantique, Brest  
