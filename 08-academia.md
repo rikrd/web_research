@@ -38,6 +38,10 @@ permalink: /academia/
   *Data-centric artificial intelligence for ecoacoustics*  
   Doctoral defense by Felix Michaud
 
+- **Dec 2024** – *Rapporteur*, IMT Atlantique, Brest  
+  *Méthodes IA multimodales dans des contextes d’observation océanographique et de surveillance maritime multi-capteurs hétérogènes*  
+  Doctoral defense by Ilyass Moummad
+
 - **Jan 2024** – *Rapporteur*, IMT Atlantique, Brest  
   *Multimodal AI Methods in Oceanographic Observation Contexts and Heterogeneous Multi-Sensor Maritime Surveillance*  
   Doctoral defense by Matteo Zambra
